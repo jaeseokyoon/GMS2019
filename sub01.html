@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="ko" >
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  	<meta http-equiv="X-UA-Compatible" id="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no,address=no,email=no">
+  	<meta name="viewport" content="width=1248">
+  	<link rel="shortcut icon" href="/images/gaeasoft_favicon.ico" />
+  	<link rel="icon" type="image/x-icon" href="/images/gaeasoft_favicon.ico" />
+  	<title>GMS for Business</title>
+
+
+    <link rel="stylesheet" href="css/style1.min.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+  </head>
+<body>
+  <div class="login">
+    <ul>
+    <li>
+      <a href="">회원가입</a>
+    </li>
+      <li>
+        <a href="">로그인</a>
+      </li>
+    </ul>
+  </div>
+  <div class="header">
+    <ul class="main_menu">
+      <li>
+        <img src="./images/logo_top.png" alt="로고">
+      </li>
+      <li>
+        <a href="01_group.html">카카오 비즈메시지</a>
+        <!--서브 메뉴01 카카오 비즈메시지 start-->
+        <div class="submenu_wrap">
+          <!-- 20181219 2뎁스 수정 start -->
+          <ul class="submenu">
+            <li>
+              &nbsp;
+            </li>
+            <li>
+              <div class="depth2">
+                <a href="02_manage.html">플러스 친구</a>
+              </div>
+              <ul class="submenu_list">
+                <li>
+                  <a href="02_manage.html">검수 신청/수정</a>
+                </li>
+                <li>
+                  <a href="02_manage.html">검수 현황</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="depth2">
+                <a href="02_manage.html">템플릿</a>
+              </div>
+              <ul class="submenu_list">
+                <li>
+                  <a href="02_manage.html">검수 신청/수정</a>
+                </li>
+                <li>
+                  <a href="02_manage.html">검수 현황</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="depth2">
+                <a href="02_manage.html">API 연동</a>
+              </div>
+              <ul class="submenu_list">
+                <li>
+                  <a href="02_manage.html">인증키 신청</a>
+                </li>
+                <li>
+                  <a href="02_manage.html">연동 규격 - 알림톡</a>
+                </li>
+                <li>
+                  <a href="02_manage.html">연동 규격 - 친구톡</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="depth2">
+                <a href="02_manage.html">전송창 연동</a>
+              </div>
+              <ul class="submenu_list">
+                <li>
+                  <a href="02_manage.html">인증키 신청</a>
+                </li>
+                <li>
+                  <a href="02_manage.html">전송창 관리</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="depth2">
+                <a href="02_manage.html">전송 관리</a>
+              </div>
+              <ul class="submenu_list">
+                <li>
+                  <a href="02_manage.html">전송 내역</a>
+                </li>
+                <li>
+                  <a href="02_manage.html">전송 조회</a>
+                </li>
+                <li>
+                  <a href="02_manage.html">전송 통계 - 월별</a>
+                </li>
+                <li>
+                  <a href="02_manage.html">전송 통계 - 일별</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <!-- 20181219 2뎁스 수정 end -->
+        </div>
+        <!--서브 메뉴01 카카오 비즈메시지 end-->
+      </li>
+
+      <li>
+        <a href="02_manage.html">문자 메시지</a>
+      </li>
+      <!--li>
+        <a href="03_folder.html">결제/사용 관리</a>
+      </li-->
+      <li>
+        <a href="04_system.html">마이페이지</a>
+      </li>
+      <li>
+        <a href="05_dashbord.html">고객센터</a>
+      </li>
+      <li class="message_transfer">
+        <div  class="mymenu_select_wrap">
+          <div class="mymenu_select">
+            <span>메시지 전송</span>
+            <img src="./images/icon_select.png">
+          </div>
+          <!-- The Modal -->
+          <div class="mymenu_popup">
+            <!-- Modal content -->
+            <ul class="mymenu-content close">
+              <li class="mymenu">
+                <a href="">알림톡 전송</a>
+              </li>
+              <!-- <hr/> -->
+              <li class="mymenu">
+                <a href="">친구톡 전송</a>
+              </li>
+              <!-- <hr/> -->
+              <li class="mymenu">
+                <a href="">문자 전송</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+
+  <div class="app_wrap">
+    <div class="num_registration">
+      <h1>발신번호 등록</h1>
+      <div class="info_wrap" style="margin-bottom:70px;">
+        <ul>
+          <li>
+            <img src="./images/popup_icon_point.png" class="img_point">정보통신사업법 개정안(84조의2)에 따라 번호인증으로 등록된 발신번호로만 문자메세지 발송이 가능합니다.
+          </li>
+          <li>
+            <img src="./images/popup_icon_point.png" class="img_point">발신번호는 최대 5개까지 등록할 수 있습니다.
+          </li>
+          <li>
+            <img src="./images/popup_icon_point.png" class="img_point">5개 이상의 발신번호가 필요하신 경우 02-0000-0000로 연락주시기 바랍니다.
+          </li>
+        </ul>
+      </div>
+
+      <!--업체정보 표 start-->
+      <div class="left_wrap">
+        <h3>업체 정보<button class="btn_plus" style="margin-top: -21px;">추가</button></h3>
+        <div class="data_table_wrap">
+          <table>
+            <colgroup>
+              <col width="15%"/><!-- 빈칸 -->
+              <col width="15%"/><!-- 알림톡 -->
+              <col width="20%"/><!-- 친구톡 -->
+              <col width="10%"/><!-- 친구톡 -->
+              <col width="20%"/><!-- 친구톡 -->
+              <col width=""/><!-- 문자메시지 -->
+            </colgroup>
+            <thead>
+              <tr>
+                <th>업체 이름</th>
+                <th>업체 아이디</th>
+                <th>최근 접속</th>
+                <th>약관</th>
+                <th>승인일</th>
+                <th>발신번호 관리</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  (주)테스트
+                </td>
+                <td>
+                  test_1
+                </td>
+                <td>
+                  2018.08.08. 11:14
+                </td>
+                <td>
+                  동의
+                </td>
+                <td>
+                  2018.06.27. 16:12
+                </td>
+                <td>
+                  <button class="btn_num">발신번호 관리</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  (주)테스트
+                </td>
+                <td>
+                  test_1
+                </td>
+                <td>
+                  2018.08.08. 11:14
+                </td>
+                <td>
+                  동의
+                </td>
+                <td>
+                  2018.06.27. 16:12
+                </td>
+                <td>
+                  <button class="btn_num">발신번호 관리</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!--업체정보 표 end-->
+
+      <div class="right_wrap">
+        <h3>발신번호 관리</h3>
+        <div class="data_table_wrap">
+          <table class="style_col">
+            <tbody>
+              <tr>
+                <th>
+                  인증 수단
+                </th>
+                <td>
+                  <div>
+                    <input id="radio1" type="radio" name="radio" value="1" checked="checked"><label for="radio1"  class="margin0"><span></span></label>
+                    핸드폰 번호
+                    <input id="radio2" type="radio" name="radio" value="2"><label for="radio2"><span></span></label>
+                    일반 번호(서류 인증)
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  핸드폰 번호
+                </th>
+                <td>
+                  <input class="phone_num" type="tel"><span>-</span><input class="phone_num" type="tel"><span>-</span><input class="phone_num" type="tel">
+                  <button class="btn_confirm">인증요청</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="data_table_wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  NO.
+                </th>
+                <th>
+                  발신번호((주)테스트)
+                </th>
+                <th>
+                  인증상태
+                </th>
+                <th>
+                  삭제
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  1
+                </td>
+                <td>
+                  02-3684-6262
+                </td>
+                <td>
+                  인증완료
+                </td>
+                <td>
+                  <button class="btn_table_close"><img src="./images/popup_X.png"></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="data_table_wrap">
+          <table class="style_col">
+            <tbody>
+              <tr>
+                <th>
+                  핸드폰 번호
+                </th>
+                <td>
+                  <input class="phone_num" type="tel"><span>-</span><input class="phone_num" type="tel"><span>-</span><input class="phone_num" type="tel">
+                  <button class="btn_confirm">인증요청</button>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  인증 번호
+                </th>
+                <td class="authenti">
+                    <input type="text" class="default_input" placeholder="3분 이내에 입력해 주세요.">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="data_btn_wrap">
+          <button class="default_on">발급신청</button>
+          <button class="default_off">취소</button>
+        </div>
+      </div>
+    </div>
+    <div class="num_registration">
+      <h1>전송 통계</h1>
+      <div class="info_wrap search_wrap">
+          <select class="select_month">
+            <option>2018</option>
+            <option>2017</option>
+            <option>2016</option>
+          </select>
+          <button class="day_search">일별조회</button>
+          <button class="day_search">월별조회</button>
+          <button class="search">조회<img src="./images/popup_search.png"></button>
+      </div>
+      <img src="./images/icon_graph.png" style="float: right;">
+      <div class="data_table_wrap">
+        <h3 class="data_title">
+          전송통계 그래프
+        </h3>
+        그래프
+      </div>
+    </div>
+    <div class="num_registration">
+      <h1>사용내역</h1>
+      <div class="info_wrap">
+        <ul>
+          <li>
+            <img src="./images/popup_icon_point.png" class="img_point">최근 3년 동안의 구매, 충전, 차감 내역을 확인 할 수 있습니다.
+          </li>
+          <li>
+            <img src="./images/popup_icon_point.png" class="img_point">충전 금액 : 97,900원 (SMS 9,700건, LMS 3,263건 발송 가능)
+          </li>
+        </ul>
+      </div>
+      <div class="info_wrap search_wrap">
+          <!-- <span class="input_search_title">기간</span> -->
+          <input  class="default_input search" type="text">
+          <span class="search_wrap_days">-</span>
+          <input  class="default_input search" type="text">
+          <button class="search">조회<img src="./images/popup_search.png"></button>
+      </div>
+      <button class="btn_exceldown">
+        엑셀 다운로드
+      </button>
+      <div class="data_table_wrap" style="margin-bottom: 30px;">
+        <table>
+          <colgroup>
+            <col width="12%"/><!-- 사용일시 -->
+            <col width="12%"/><!-- 사용업체 -->
+            <col width="7%"/><!-- 사용구분 -->
+            <col width="7%"/><!-- 사용금액 -->
+            <col width="7%"/><!-- 잔액 -->
+            <col width="7%"/><!-- 결제수단 -->
+            <col width="7%"/><!-- 메시지타입 -->
+            <col width="7%"/><!-- 전송타입 -->
+            <col width=""/><!-- 사용내역 -->
+          </colgroup>
+          <thead>
+            <tr>
+              <th>사용일시</th>
+              <th>사용업체</th>
+              <th>사용구분</th>
+              <th>사용금액</th>
+              <th>잔액</th>
+              <th>결제수단</th>
+              <th>메시지타입</th>
+              <th>전송타입</th>
+              <th>사용내역</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                2018.07.31 18:51
+              </td>
+              <td>
+                (주)테스트 (test_1)
+              </td>
+              <td>
+                <span class="down">차감</span>
+              </td>
+              <td>
+                -60원
+              </td>
+              <td>
+                97,980원
+              </td>
+              <td>
+                -
+              </td>
+              <td>
+                LMS
+              </td>
+              <td>
+                예약
+              </td>
+              <td>
+                예약 전송 취소건 환불 (2건) - 전송코드 : 47344
+              </td>
+            </tr>
+            <tr>
+              <td>
+                2018.08.08. 11:14
+              </td>
+              <td>
+                (주)테스트 (test_1)
+              </td>
+              <td>
+                <span class="up">충전</span>
+              </td>
+              <td>
+                60원
+              </td>
+              <td>
+                97,980원
+              </td>
+              <td>
+                -
+              </td>
+              <td>
+                LMS
+              </td>
+              <td>
+                예약
+              </td>
+              <td>
+                예약 전송 취소건 환불 (2건) - 전송코드 : 47344
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="pagebtn margin_clear">
+        <ul>
+          <li class="page_cuser"><img src="./images/icon_pagebtn_LL.png"alt="first_page"></li>
+          <li class="page_cuser"><img src="./images/icon_pagebtn_L.png"alt="left_page"></li>
+          <li class="page_num active">1</li>
+          <li class="page_num">2</li>
+          <li class="page_num">3</li>
+          <li class="page_num">4</li>
+          <li class="page_num">5</li>
+          <li class="page_cuser"><img src="./images/icon_pagebtn_R.png"alt="right_page"></li>
+          <li class="page_cuser"><img src="./images/icon_pagebtn_RR.png"alt="last_page"></li>
+        </ul>
+      </div>
+    </div>
+    <div class="num_registration">
+      <h1>충전하기</h1>
+      <div class="info_wrap" style="margin-bottom:20px;">
+        <ul>
+          <li>
+            <img src="./images/popup_icon_point.png" class="img_point">세금계산서는 충전금액이 아닌 매월 소진된 금액을 기준으로 발행됩니다.
+          </li>
+          <li>
+            <img src="./images/popup_icon_point.png" class="img_point">충전 자체로매출 인식이 되지 않는 서비스 특성상, 부가세 신고는 전자 세금계산서로만 가능합니다.
+          </li>
+        </ul>
+      </div>
+      <div class="data_table_wrap">
+        <table class="style_col wide">
+          <tbody>
+            <tr>
+              <th>
+                충전수단
+              </th>
+              <td>
+                <div>
+                  무통장입금 (기업은행 : 592-02099-01-026, 예금주 : (주)지어소프트)
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                충전금액
+              </th>
+              <td>
+                <input class="default_input money" type="text"  placeholder="100,000원 이상 가능"><span>원</span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                입금자명
+              </th>
+              <td>
+                <input class="default_input bank" type="text" placeholder="실제 통장에 표기되는 입금자명을 입력해 주세요.">
+              </td>
+            </tr>
+            <tr>
+              <th>
+                핸드폰번호
+              </th>
+              <td>
+                <input class="phone_num wide" type="tel"><span>-</span><input class="phone_num wide wide" type="tel"><span>-</span><input class="phone_num wide" type="tel">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="data_btn_wrap">
+        <button class="default_on">신청</button>
+        <button class="default_off">취소</button>
+      </div>
+      <div class="bank_info">
+        <h3>※ 무통장 입금 안내</h3>
+        <ul>
+          <li>
+            <img src="./images/popup_icon_point.png" class="img_point">금액, 입금자명이 다른 경우, 충전되지 않습니다.
+          </li>
+          <li>
+          <img src="./images/popup_icon_point.png" class="img_point">업무 시간 내에 입금된 내역 확인 후, 수동으로 처리해 드립니다. 업무시간 : 평일 09:00~17:00 (점심시간 12:00~13:00)
+          </li>
+          <li>
+          <img src="./images/popup_icon_point.png" class="img_point">입금 문의 : 080-0000-0000
+          </li>
+          <li>
+          <img src="./images/popup_icon_point.png" class="img_point">주말 및 공휴일 처리 불가, 현금 영수증 발행 불가
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="num_registration">
+      <h1>API 연동규격</h1>
+      <div class="api_content">
+        <ul class="tabs wide">
+            <li class="active" rel="tab1">메시지 전송</li>
+            <li rel="tab2">전송내역 조회</li>
+            <li rel="tab3">전송내역 상세조회</li>
+            <li rel="tab4">전송가능 건수</li>
+            <li rel="tab5">예약내역 조회</li>
+            <li rel="tab6">예약전송 취소</li>
+        </ul>
+        <div class="tab_container">
+            <div id="tab1" class="tab_content">
+              <div class="info_wrap search_wrap">
+                  <span class="input_search_title">요청번호</span>
+                  <input  class="default_input search" type="text">
+                  <button class="search">조회<img src="./images/popup_search.png"></button>
+              </div>
+              <h3>발신번호 관리</h3>
+              <div class="data_table_wrap">
+                <table class="style_col wide">
+                  <tbody>
+                    <tr>
+                      <th>
+                        충전수단
+                      </th>
+                      <td>
+                          무통장입금 (기업은행 : 592-02099-01-026, 예금주 : (주)지어소프트)
+                          <button class="btn_demo">DEMO</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        충전금액
+                      </th>
+                      <td>
+                        <input class="default_input money" type="text" placeholder="100,000원 이상 가능"><span>원</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        입금자명
+                      </th>
+                      <td>
+                        <input class="default_input bank" type="text" placeholder="실제 통장에 표기되는 입금자명을 입력해 주세요.">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        핸드폰번호
+                      </th>
+                      <td>
+                        <input class="phone_num wide" type="tel"><span>-</span><input class="phone_num wide" type="tel"><span>-</span><input class="phone_num wide" type="tel">
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- #tab1 -->
+            <div id="tab2" class="tab_content">
+            2222
+            </div>
+            <!-- #tab2 -->
+            <div id="tab3" class="tab_content">
+            3333Halo:
+            </div>
+            <!-- #tab3 -->
+        </div>
+      </div>
+    </div>
+    <div class="num_registration">
+      <h1>사용내역</h1>
+      <div class="info_wrap">
+        <ul>
+          <li>
+            <img src="./images/popup_icon_point.png" class="img_point">최근 3년 동안의 구매, 충전, 차감 내역을 확인 할 수 있습니다.
+          </li>
+          <li>
+            <img src="./images/popup_icon_point.png" class="img_point">충전 금액 : 97,900원 (SMS 9,700건, LMS 3,263건 발송 가능)
+          </li>
+        </ul>
+      </div>
+      <div class="info_wrap search_wrap">
+          <span class="input_search_title">기간</span>
+          <input  class="default_input search" type="text">
+          <span class="search_wrap_days">-</span>
+          <input  class="default_input search" type="text">
+          <button class="search">조회<img src="./images/popup_search.png"></button>
+      </div>
+      <button  class="btn_exceldown">
+        엑셀 다운로드
+      </button>
+      <div class="data_table_wrap" style="margin-bottom: 30px;">
+        <table>
+          <colgroup>
+            <col width="12%"/><!-- 사용일시 -->
+            <col width="12%"/><!-- 사용업체 -->
+            <col width="7%"/><!-- 사용구분 -->
+            <col width="7%"/><!-- 사용금액 -->
+            <col width="7%"/><!-- 잔액 -->
+            <col width="7%"/><!-- 결제수단 -->
+            <col width="7%"/><!-- 메시지타입 -->
+            <col width="7%"/><!-- 전송타입 -->
+            <col width=""/><!-- 사용내역 -->
+          </colgroup>
+          <thead>
+            <tr>
+              <th>사용일시</th>
+              <th>사용업체</th>
+              <th>사용구분</th>
+              <th>사용금액</th>
+              <th>잔액</th>
+              <th>결제수단</th>
+              <th>메시지타입</th>
+              <th>전송타입</th>
+              <th>사용내역</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                2018.07.31 18:51
+              </td>
+              <td>
+                (주)테스트 (test_1)
+              </td>
+              <td>
+                <span class="down">차감</span>
+              </td>
+              <td>
+                -60원
+              </td>
+              <td>
+                597,980원
+              </td>
+              <td>
+                -
+              </td>
+              <td>
+                LMS
+              </td>
+              <td>
+                예약
+              </td>
+              <td>
+                예약 전송 취소건 환불 (2건) - 전송코드 : 47344
+              </td>
+            </tr>
+            <tr>
+              <td>
+                2018.08.08. 11:14
+              </td>
+              <td>
+                (주)테스트 (test_1)
+              </td>
+              <td>
+                <span class="up">충전</span>
+              </td>
+              <td>
+                60원
+              </td>
+              <td>
+                97,980원
+              </td>
+              <td>
+                -
+              </td>
+              <td>
+                LMS
+              </td>
+              <td>
+                예약
+              </td>
+              <td>
+                예약 전송 취소건 환불 (2건) - 전송코드 : 47344
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="pagebtn margin_clear">
+        <ul>
+          <li class="page_cuser"><img src="./images/icon_pagebtn_LL.png"alt="first_page"></li>
+          <li class="page_cuser"><img src="./images/icon_pagebtn_L.png"alt="left_page"></li>
+          <li class="page_num active">1</li>
+          <li class="page_num">2</li>
+          <li class="page_num">3</li>
+          <li class="page_num">4</li>
+          <li class="page_num">5</li>
+          <li class="page_cuser"><img src="./images/icon_pagebtn_R.png"alt="right_page"></li>
+          <li class="page_cuser"><img src="./images/icon_pagebtn_RR.png"alt="last_page"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="./js/index.js"></script>
+</body>
+</html>

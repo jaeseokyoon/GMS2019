@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ko" >
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" id="X-UA-Compatible" content="IE=edge" />
+  <meta name="format-detection" content="telephone=no,address=no,email=no">
+	<meta name="viewport" content="width=1248">
+	<link rel="shortcut icon" href="/images/gaeasoft_favicon.ico" />
+	<link rel="icon" type="image/x-icon" href="/images/gaeasoft_favicon.ico" />
+	<title>GMS for Business</title>
+
+  <link rel="stylesheet" href="css/style1.min.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet"> -->
+  <link rel="stylesheet" href="css/font.css">
+
+
+  <script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
+  <!-- <script src="http://code.jquery.com/jquery-3.3.1.js"></script> -->
+  <script>
+    $( document ).ready( function() {
+      var jbOffset = $( '.jbMenu' ).offset();
+      $( window ).scroll( function() {
+        if ( $( document ).scrollTop() > jbOffset.top ) {
+          $( '.jbMenu' ).addClass( 'jbFixed' );
+        }
+        else {
+          $( '.jbMenu' ).removeClass( 'jbFixed' );
+        }
+      });
+    });
+    $(function(){
+
+        var link = $('#navbar a.dot');
+        link.on('click',function(e){
+
+            //href 속성을 통해, /div id 타겟을 잡음
+            var target = $($(this).attr('href'));
+
+            //target section의 좌표를 통해 꼭대기로 이동
+            $('html, body').animate({
+                scrollTop: target.offset().top-89
+            },650);
+
+            //active 클래스 부여
+            // $(this).addClass('active');
+
+            //앵커를 통해 이동할때, URL에 #id가 붙지 않도록 함.
+            e.preventDefault();
+        });
+
+        $(window).on('scroll',function(){
+            findPosition();
+        });
+
+        function findPosition(){
+            $('.section').each(function(){
+                if( ($(this).offset().top - $(window).scrollTop() ) < 90){
+                    link.removeClass('active');
+                    $('#navbar').find('[data-scroll="'+ $(this).attr('id') +'"]').addClass('active');
+                }
+            });
+        }
+
+        findPosition();
+    });
+  </script>
+
+</head>
+<body ID="top">
+  <div class="login">
+    <ul>
+      <li>
+        <a href="">회원가입</a>
+      </li>
+      <li>
+        <a href="">로그인</a>
+      </li>
+    </ul>
+  </div>
+  <div class="header">
+    <ul class="main_menu">
+      <li>
+        <img src="./images/logo_top.png" alt="로고">
+      </li>
+      <li>
+        <a href="01_group.html">카카오 비즈메시지</a>
+        <!--서브 메뉴01 카카오 비즈메시지 start-->
+        <div class="submenu_wrap">
+          <ul class="submenu clearfix">
+            <li>
+              &nbsp;
+            </li>
+            <li>
+              <div class="depth2">
+                <a href="02_manage.html">플러스 친구</a>
+              </div>
+              <ul class="submenu_list">
+                <li>
+                  <a href="02_manage.html">검수 신청/수정</a>
+                </li>
+                <li>
+                  <a href="02_manage.html">검수 현황</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="depth2">
+                <a href="02_manage.html">템플릿</a>
+              </div>
+              <ul class="submenu_list">
+                <li>
+                  <a href="02_manage.html">검수 신청/수정</a>
+                </li>
+                <li>
+                  <a href="02_manage.html">검수 현황</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="depth2">
+                <a href="02_manage.html">API 연동</a>
+              </div>
+              <ul class="submenu_list">
+                <li>
+                  <a href="02_manage.html">인증키 신청</a>
+                </li>
+                <li>
+                  <a href="02_manage.html">연동 규격 - 알림톡</a>
+                </li>
+                <li>
+                  <a href="02_manage.html">연동 규격 - 친구톡</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="depth2">
+                <a href="02_manage.html">전송창 연동</a>
+              </div>
+              <ul class="submenu_list">
+                <li>
+                  <a href="02_manage.html">인증키 신청</a>
+                </li>
+                <li>
+                  <a href="02_manage.html">전송창 관리</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="depth2">
+                <a href="02_manage.html">전송 관리</a>
+              </div>
+              <ul class="submenu_list">
+                <li>
+                  <a href="02_manage.html">전송 내역</a>
+                </li>
+                <li>
+                  <a href="02_manage.html">전송 조회</a>
+                </li>
+                <li>
+                  <a href="02_manage.html">전송 통계 - 월별</a>
+                </li>
+                <li>
+                  <a href="02_manage.html">전송 통계 - 일별</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!--서브 메뉴01 카카오 비즈메시지 end-->
+      </li>
+      <li>
+        <a href="02_manage.html">문자 메시지</a>
+      </li>
+      <li>
+        <a href="04_system.html">마이페이지</a>
+        <!--서브 메뉴01 카카오 비즈메시지 start-->
+        <div class="submenu_wrap">
+          <ul class="submenu">
+            <li>
+              &nbsp;
+            </li>
+            <li>
+              <div class="depth2">
+                <a href="02_manage.html">플러스 친구</a>
+              </div>
+            </li>
+            <li>
+              <div class="depth2">
+                <a href="02_manage.html">템플릿</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!--서브 메뉴01 카카오 비즈메시지 end-->
+      </li>
+      <li>
+        <a href="05_dashbord.html">고객센터</a>
+        <!--서브 메뉴01 카카오 비즈메시지 start-->
+        <div class="submenu_wrap">
+          <ul class="submenu">
+            <li>
+              &nbsp;
+            </li>
+            <li>
+              <div class="depth2">
+                <a href="02_manage.html">플러스 친구</a>
+              </div>
+            </li>
+            <li>
+              <div class="depth2">
+                <a href="02_manage.html">템플릿</a>
+              </div>
+            </li>
+            <li>
+              <div class="depth2">
+                <a href="02_manage.html">API 연동</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!--서브 메뉴01 카카오 비즈메시지 end-->
+
+      </li>
+      <li class="message_transfer">
+        <div  class="mymenu_select_wrap">
+          <div class="mymenu_select">
+            <span>메시지 전송</span>
+            <img src="./images/icon_select.png">
+          </div>
+          <!-- Modal content start-->
+          <div class="mymenu_popup">
+            <ul class="mymenu-content close">
+              <li class="mymenu">
+                <a href="">알림톡 전송</a>
+              </li>
+              <li class="mymenu">
+                <a href="">친구톡 전송</a>
+              </li>
+              <li class="mymenu">
+                <a href="">문자 전송</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Modal content end-->
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="banner_wrap">
+    <div class="banner_text">
+     <h1>GMS <span>for Business</span></h1>
+     <p>고객과 만나는 메시지 홍보의 모든과정을 지원합니다.<br/>
+     GMS의 비지니스 파트너로 함께하세요.</p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <nav class="menu_tab_wrap jbMenu navbar" id="navbar">
+      <ul class="menu_tab nav-menu" id="menu">
+        <li>
+           <a data-scroll="content01" href="#content01" class="dot active">서비스 특징</a>
+        </li>
+        <li>
+            <a data-scroll="content02" href="#content02" class="dot">서비스 비교</a>
+         </li>
+         <li>
+             <a data-scroll="content03" href="#content03" class="dot">파트너 / 이용 문의</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="section content01"  id="content01">
+      <div class="content_wrap">
+        <div class="content">
+          <div class="content_text">
+            <h1>친구 추가 없이 카카오톡으로 <span class="text_blue">알림톡</span></h1>
+            <p>사전 승인 기반의 정보성 알림톡으로 신뢰를 더해보세요.<br/>
+              문자 메시지보다 70%이상 저렴한 비용으로 <br/>
+              카카오톡을 이용한 비즈니스 메시지를 제공합니다.<br/>
+              <span class="main_text_bottomMargin">카카오톡을 이용하지 않는 고객에게는 문자 메시지로 대체하여 발송 가능합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="content_wrap">
+        <div class="content">
+          <div class="content_text right">
+            <h1>친구에게는 맞춤형으로, 광고컨텐츠 <span class="text_blue">친구톡</span></h1>
+            <p>
+              1234567890<br/>공지, 이벤트, 할인쿠폰도 쉽게 발송해 보세요.<br/>
+              플러스친구를 직접 친구로 맺은 고객들을 타겟팅하여,<br/>
+              <!-- 20190107 수정 start -->
+              신뢰와 함께 광고 효율은 더욱 높아집니다.<br/>
+              <span class="main_text_bottomMargin">기업의 CRM/커머스/물류 시스템과 연동하여, 다양한 마케팅에 활용할 수 있습니다.
+              <!-- 20190107 수정 end -->
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="content_wrap">
+        <div class="content">
+          <div class="content_text BG03">
+            <h1><span class="text_blue">문자 메시지</span> 내용을 저장할 수 있습니다</h1>
+            <p>국내 최저가로 제공되는 문자 서비스를 이용하세요. <br/>
+              매번 메시지를 새로 작성할 필요가 없습니다.<br/>
+              <!-- 20190107 수정 start -->
+              주소록과 메시지 내용을 저장하고 수정하여 발송해보세요. <br/>
+              <span class="main_text_bottomMargin">단문, 장문을 대량 발송하며, 고객 주소록은 한 번의 업로드로 영구 보관합니다.</span>
+              <!-- 20190107 수정 end -->
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section content_wrap bg_gray" id="content02">
+      <div class="content">
+        <div class="content_sevice">
+          <h1>서비스 비교</h1>
+          <h3>알림톡, 친구톡, 문자 메시지를 한눈에 비교해 드립니다.</h3>
+          <div>
+            <table>
+              <colgroup>
+                <col width="16%"/><!-- 빈칸 -->
+                <col width="28%"/><!-- 알림톡 -->
+                <col width="28%"/><!-- 친구톡 -->
+                <col width="28%"/><!-- 문자메시지 -->
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>
+                    &nbsp;
+                  </th>
+                  <th>
+                    알림톡
+                  </th>
+                  <th>
+                    친구톡
+                  </th>
+                  <th>
+                    문자 메시지
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    특장점
+                  </td>
+                  <td>
+                    카카오톡 이용 고객에게 정보 발송
+                  </td>
+                  <td>
+                    카카오톡 친구를 맺은 고객에게 광고 발송
+                  </td>
+                  <td>
+                    단문 및 장문 문자메시지를 대량 발송
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    발송 대상
+                  </td>
+                  <td>
+                    모든 고객<br/>
+                    (전화번호 정보 필요)
+                  </td>
+                  <td>
+                    플러스 친구를 추가한 고객<br/>
+                    (전화번호 정보 필요)
+                  </td>
+                  <td>
+                    휴대폰을 보유한 고객이라면 누구나
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    활용 사례
+                  </td>
+                  <td>
+                    결제 승인/취소 안내, 배송 정보, 예약 안내 등
+                  </td>
+                  <td>
+                    유형에 제한 없는 정보성 및 광고성 메시지
+                  </td>
+                  <td>
+                    유형에 제한 없는 정보성 및 광고성 메시지
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    메시지 형식
+                  </td>
+                  <td>
+                    한/영 구분 없이 최대 1,000자 텍스트
+                  </td>
+                  <td>
+                    [텍스트형] 한/영 구분 없이 최대 1,000자 텍스트<br/>
+                    [이미지형] 이미지(1장) 포함 최대 400자 텍스트
+                  </td>
+                  <td>
+                    [SMS] 한/영 구분 없이 최대 80자 텍스트<br/>
+                    [LMS] 한/영 구분 없이 최대 2,000자 텍스트
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    특이사항
+                  </td>
+                  <td>
+                    메시지 내용 템플릿의 사전 심사 필요
+                  </td>
+                  <td>
+                    야간 발송 제한 (20시~익일 08시)
+                  </td>
+                  <td>
+                    메시지 도달률 99.9%
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    공통사항
+                  </td>
+                  <td colspan=3>
+                    사이트 직접 발송/API 적용 선택 가능, 전송 결과 및 주소록 관리 가능, 실시간 발신 내역 통계 제공
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section content_wrap" id="content03">
+      <div class="content">
+        <div class="content_sevice">
+          <h1>파트너 소개</h1>
+          <h3>다년간의 메시지 운영 노하우로 다양한 제휴/고객사를 보유하고 있습니다.</h3>
+          <div class="logo_office_wrap">
+            <ul>
+              <li>
+                <img src="./images/logo_office01.png">
+                <p>KT</p>
+              </li>
+              <li class="second_marginRight0">
+                <img src="./images/logo_office02.png">
+                <p>국세청 근로장려금</p>
+              </li>
+              <li>
+                <img src="./images/logo_office04.png">
+                <p>군인 메시지</p>
+              </li>
+              <li class="forth_marginRight0">
+                <img src="./images/logo_office08.png">
+                <p>OASIS</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section content_wrap bg_gray" id="content03" style="padding-bottom: 90px;">
+      <div class="content">
+        <div class="content_sevice">
+          <h1>이용 문의</h1>
+          <h3>
+            02-2155-5100<br/>
+            서울시 서초구 서초중앙로 8길 117, 지어소프트 빌딩<br/>
+            dev2010@geaesoft.co.kr
+          </h3>
+          <button class="gms_service_down_btn">
+            GMS 서비스 소개서 다운로드
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot_wrap">
+    <div class="foot">
+      <ul class="foot_menu">
+        <li><a>개인정보처리방침</a></li>
+        <li><a href="">이용약관</a></li>
+        <li><a href="">공지사항</a></li>
+        <li><a href="">1:1문의하기</a></li>
+      </ul><br/>
+      <div class="foot_text">
+        (주)지어소프트 대표이사 : 오형돈, 박승준&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;사업자등록번호 211-86-45334<br/>
+        서울시 서초구 서초중앙로 8길 117, 지어소프트 빌딩&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;고객센터 02-2155-5100
+      </div>
+      <div class="logo_wrap">
+        <img src="./images/logo_foot.png" alt="로고">
+      </div>
+    </div>
+  </div>
+  <button class="btn_top">
+    <a href="#top"><img src="./images/btn_top.png"></a>
+  </button>
+</body>
+</html>

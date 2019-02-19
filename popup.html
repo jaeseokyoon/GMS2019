@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ko" >
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" id="X-UA-Compatible" content="IE=edge" />
+  <meta name="format-detection" content="telephone=no,address=no,email=no">
+	<meta name="viewport" content="width=1248">
+	<link rel="shortcut icon" href="https://gms.oasis.co.k/bizmessage/intro.do/images/gaeasoft_favicon.ico" />
+	<link rel="icon" type="image/x-icon" href="https://gms.oasis.co.k/bizmessage/intro.do/images/gaeasoft_favicon.ico" />
+	<title>GMS for Business</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/font.css">
+  <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+  <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+  <div class="popup_wrap">
+    <div class="popup_header">
+      <img src="./images/popup_logo.png">
+      <div class="popup_header_info">
+        <button  id="myBtn0">
+          <img src="./images/popup_icon_sound.png">수신거부해제
+        </button>
+      <!-- Modal content start-->
+        <div id="myModal0"  class="modal">
+          <div class="popup_SMSlist">
+
+            <h3 class="popup_SMSlist_title">
+              SMS 전송 리스트<span>(주)테스트</span>
+            </h3>
+            <span class="close0_1 b-close">&nbsp;</span>
+
+            <div class="popup_SMSlist_content">
+              <div class="SMSlist_info">
+                <div  class="SMSlist_search">
+                  <input type="search" placeholder="폰번호, 이름으로 조회하세요.">
+                  <button class="search_btn">조회<img src="./images/popup_search.png"></button>
+                </div>
+                <div class="popup_SMSlist_button_wrap">
+                  <div class="popup_SMSlist_num"><span>1</span>건</div>
+                  <button type="button" class="list_button">대기리스트</button>
+                  <button type="button" class="list_button">실패리스트</button>
+                  <button type="button" class="list_button">성공리스트</button>
+                </div>
+                <div class="popup_SMSlist_table_wrap">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>NO.</th>
+                        <th>상태</th>
+                        <th>전화번호</th>
+                        <th>이름</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>성공</td>
+                        <td>0245556333</td>
+                        <td>홍길동</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="pagebtn">
+                  <ul>
+                    <li class="page_cuser"><img src="./images/icon_pagebtn_LL.png"alt="first_page"></li>
+                    <li class="page_cuser"><img src="./images/icon_pagebtn_L.png"alt="left_page"></li>
+                    <li class="page_num active">1</li>
+                    <li class="page_num">2</li>
+                    <li class="page_num">3</li>
+                    <li class="page_num">4</li>
+                    <li class="page_num">5</li>
+                    <li class="page_cuser"><img src="./images/icon_pagebtn_R.png"alt="right_page"></li>
+                    <li class="page_cuser"><img src="./images/icon_pagebtn_RR.png"alt="last_page"></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- Modal content end-->
+
+        <button  id="myBtn1">
+          <img src="./images/popup_icon_call.png">공지 & 도움말
+        </button>
+        <!-- Modal content start-->
+        <div id="myModal1"  class="modal">
+          <div class="popup_notice">
+
+            <h3 class="popup_notice_title">공지 & 도움말</h3><span class="close1 b-close">&nbsp;</span>
+
+            <div class="popup_notice_content">
+              <h3>
+                <img src="./images/popup_icon_pointB.png" class="img_point">서비스 이용 가이드 v1.2
+              </h3>
+              <button class="btn_guidedown">
+                서비스 가이드 다운로드<img src="./images/popup_icon_down.png">
+              </button>
+              <ul>
+                <li>
+                  <span class="icon_list">-</span> 회신번호 (보내는 번호) 변경을 원하실 경우, [메세지 전송] 탭 > 하단 “회신번호
+                  변경” 에서 변경할 회신번호 (보내는번호) 선택 후, [회신번호 변경] 버튼 클릭
+                  하시면 됩니다.<br/>
+                 (변경 후 “회신번호”에 변경된 회신 번호가 정상적으로 노출되는지 확인)
+                </li>
+                <li>
+                  <span class="icon_list">-</span>회신번호 변경 기능은 복수의회신 번호를 등록한 계정에한하여 제공되며,
+                  회신번호 추가는 지어소프트 담당자에게 요청 바랍니다.
+                </li>
+              </ul>
+            </div>
+            <div class="button_wrap popup">
+              <button type="button" class="button_default blue">확인</button>
+              <button type="button" class="button_default close1_1">닫기</button>
+            </div>
+          </div>
+        </div>
+        <!-- Modal content end-->
+
+        <div class="sms_info">
+          충전금액 : 97,880원 (SMS 9,788건, LMS 3,263건 발송 가능)
+        </div>
+      </div>
+    </div>
+    <div class="popup_content_wrap">
+      <div class="popup_phone">
+        <div class="popup_phone_info">
+          <h3>
+            <img src="./images/icon_open_letter.png" class="img_point" style="padding-bottom:3px">제목입력 (LMS 발송 인 경우)
+          </h3>
+          <div  class="popup_phone_info_text">
+            <textarea placeholder="SMS (1~80 Byte) &#13;&#10;LMS (80~2,000 Byte)"></textarea>
+          </div>
+          <ul class="popup_phone_info_btn">
+            <li class="phone_btn">
+              <a>메시지<br/>저장</a>
+            </li>
+            <li class="phone_btn">
+              <a>저장<br/>메시지함</a>
+            </li>
+            <li class="phone_btn">
+              <a>예약<br/>메시지함</a>
+            </li>
+            <li class="phone_btn">
+              <a>080<br/>수신거부</a>
+            </li>
+          </ul>
+        </div>
+        <div class="popup_phone_btn_wrap">
+          <button class="default_big_off">예약하기</button>
+          <button class="default_big_on">전송하기</button>
+        </div>
+      </div>
+      <div class="popup_content">
+        <ul class="tabs">
+            <li class="active" rel="tab1">간편 전송</li>
+            <li rel="tab2">대량 전송</li>
+            <li rel="tab3">전송 결과</li>
+        </ul>
+        <div class="tab_container">
+        <!-- #tab1 start-->
+          <div id="tab1" class="tab_content">
+            <ul>
+              <li>
+                <img src="./images/popup_icon_point.png" class="img_point">[간편 전송]은 최대 100건까지 수신번호 추가가 가능합니다.
+              </li>
+              <li>
+                <img src="./images/popup_icon_point.png" class="img_point">대량 전송은 상단의 [대량 전송] 탭을 이용해 주세요.
+              </li>
+            </ul>
+            <div>
+              <table class="top_border">
+                <tbody>
+                  <tr>
+                    <td class="font_bold">
+                      8월 사용량
+                    </td>
+                    <td>
+                      SMS 10건 LMS 0건  (100원)
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div  class="search_num">
+              수신번호 입력
+              <input type="search">
+              <button class="search_btn middle">조회<img src="./images/popup_search.png"></button>
+            </div>
+            <div class="search_info">
+              <table>
+                <thead>
+                  <tr>
+                    <th>NO.</th>
+                    <th>전화번호</th>
+                    <th>삭제</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>01036846262</td>
+                    <td>
+                      <button><img src="./images/popup_X.png"></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div>
+              <table class="anather_border">
+                <tbody>
+                  <tr>
+                    <td class="font_bold">회신번호</td>
+                    <td>0221555100</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        <!-- #tab1 end-->
+
+        <!-- #tab2 start-->
+          <div id="tab2" class="tab_content">
+            <ul>
+              <li>
+                <img src="./images/popup_icon_point.png" class="img_point">[간편 전송]은 최대 100건까지 수신번호 추가가 가능합니다.
+              </li>
+              <li>
+                <img src="./images/popup_icon_point.png" class="img_point">대량 전송은 상단의 [대량 전송] 탭을 이용해 주세요.
+              </li>
+            </ul>
+            <div>
+              <table class="top_border">
+                <tbody>
+                  <tr>
+                    <td class="font_bold">
+                      8월 사용량
+                    </td>
+                    <td>
+                      SMS 10건 LMS 0건  (100원)
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="search_info">
+              <h3 class="search_info_title">수신번호 그룹<button class="list_button" style="margin-top: -17px;">주소록 등록</button></h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th>NO.</th>
+                    <th>전화번호</th>
+                    <th>삭제</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>01036846262</td>
+                    <td>
+                      <button><img src="./images/popup_X.png"></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div>
+              <table class="anather_border">
+                <tbody>
+                  <tr>
+                    <td class="font_bold">회신번호</td>
+                    <td>0221555100</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        <!-- #tab2 end-->
+
+        <!-- #tab3 start-->
+          <div id="tab3" class="tab_content">
+            <ul>
+              <li>
+                <img src="./images/popup_icon_point.png" class="img_point">전송한 메시지 수에 따라 조회 시간이 다소 소요될 수 있습니다.
+              </li>
+              <li>
+                <img src="./images/popup_icon_point.png" class="img_point">"성공/실패/대기" 선택 시, 전송 결과 내역을 확인할 수 있습니다.
+              </li>
+              <li>
+                <img src="./images/popup_icon_point.png" class="img_point">전송 결과 내역은 이번달을 제외한 최근 6개월까지 제공됩니다.
+              </li>
+            </ul>
+            <div class="search_info">
+              <table>
+                <thead>
+                  <tr>
+                    <th>메시지</th>
+                    <th>전송일</th>
+                    <th>타입</th>
+                    <th>타입</th>
+                    <th>건수</th>
+                    <th>성공</th>
+                    <th>실패</th>
+                    <th>대기</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>(광고)우리생협(전품목개시)</td>
+                    <td>12.13 11:55</td>
+                    <td>즉시</td>
+                    <td>LMS</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div>
+              <table class="anather_border">
+                <tbody>
+                  <tr>
+                    <td class="font_bold">회신번호</td>
+                    <td>0221555100</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        <!-- #tab3 end-->
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- 샘플 팝업 start -->
+  <div class="popup_default">
+    <h3 class="popup_default_title">기본 팝업</h3>
+    <div class="popup_default_content">
+      <p>
+        - 회신번호 (보내는 번호) 변경을 원하실 경우, [메세지 전송] 탭 > 하단 “회신번호 변경” 에서 변경할 회신번호 (보내는번호) 선택 후, [회신번호 변경] 버튼 클릭 하시면 됩니다.
+        (변경 후 “회신번호”에 변경된 회신 번호가 정상적으로 노출되는지 확인)
+        -회신번호 변경 기능은 복수의회신 번호를 등록한 계정에한하여 제공되며, 회신번호 추가는 지어소프트 담당자에게 요청 바랍니다.
+      </p>
+      <textarea style="height:300px"></textarea>
+    </div>
+    <div class="popup_button_wrap">
+      <button type="button" class="button_default blue">확인</button>
+      <button type="button" class="button_default close1_1">닫기</button>
+    </div>
+  </div>
+<!-- 샘플 팝업 end -->
+
+  <script type="text/javascript" src="./js/index.js"></script>
+</body>
+</html>

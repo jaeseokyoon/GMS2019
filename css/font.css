@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans+KR);
+
+
+@font-face {
+	font-family: 'NotoR';
+	src: local("☺"),
+       url(./font/notokr-regular.eot?#iefix) format('embedded-opentype'),
+		   url(./font/notokr-regular.woff2) format('woff2'),
+		   url(./font/notokr-regular.woff) format('woff');
+  font-weight: 300;
+  unicode-range: U+0-10FFFF;
+}
+
+@font-face {
+ font-family: 'NBGW';
+ src: url(./font/NanumBarunGothicWeb.eot);
+ src: local("☺"),
+      url(./font/NanumBarunGothicWeb.eot?#iefix) format('embedded-opentype'),
+      url(./font/NanumBarunGothicWeb.woff) format('woff');
+ font-weight: 400;
+ unicode-range: U+0-10FFFF;
+}
+
+@font-face {
+ font-family: 'nanum-squre_L';
+ src: local("☺"),
+      url(./font/NanumSquareL.eot?#iefix) format('embedded-opentype'),
+      url(./font/NanumSquareL.woff) format('woff');
+ font-weight: 300;
+ unicode-range: U+0-10FFFF;
+}
+
+
+@font-face {
+ font-family: 'nanum-squre_R';
+ src: url(./font/NanumSquareR.eot);
+ src: local("☺"),
+      url(./font/NanumSquareR.eot?#iefix) format('embedded-opentype'),
+      url(./font/NanumSquareR.woff2) format('woff2');
+ font-weight: 400;
+ unicode-range: U+0-10FFFF;
+}
+@font-face {
+ font-family: 'nanum-squre_B';
+ src:local("☺"),
+     url(./font/NanumSquareB.eot?#iefix) format('embedded-opentype'),
+     url(./font/NanumSquareB.woff) format('woff');
+ font-weight: 700;
+ unicode-range: U+0-10FFFF;
+}
+@font-face {
+   font-family: 'nanum-squre_EB';
+   src:local("☺"),
+       url(./font/NanumSquareEB.eot?#iefix) format('embedded-opentype'),
+       url(./font/NanumSquareEB.woff) format('woff');
+   font-weight: 800;
+   unicode-range: U+0-10FFFF;
+}
+@font-face {
+   font-family: 'NanumGothic';
+   src: local("☺"),
+        url('./font/NanumGothic.eot?#iefix') format('embedded-opentype'),
+        url('./font/NanumGothic.woff') format('woff');
+   font-weight: 400;
+   unicode-range: U+0-10FFFF;
+}
+@font-face {
+  font-family: 'myriad-pro', sans-serif;
+  src:local("☺"),
+      url(myriad-pro.eot?#iefix) format('embedded-opentype'),
+      url(myriad-pro.woff) format('woff');
+  font-weight: 400;
+}
