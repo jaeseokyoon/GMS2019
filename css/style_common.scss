@@ -1,0 +1,449 @@
+.clearfix{*zoom:1;}/*ie6 float 속성 오류 처리*/
+.clearfix:after{display:block;clear:both;content:'';}/*float 속성 오류 처리*/
+tr,td{
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+th, td, td a {
+  font-size: 14px;
+}
+.overhidden{  /*텍스트 초과시 점선으로 처리*/
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+a,a:hover,
+button:hover,.pagebtn li:hover{text-decoration:none;cursor:pointer;}
+*:focus {outline:none}
+textarea::placeholder,
+input::placeholder{color:#999;}
+textarea:-ms-input-placeholder,
+input:-ms-input-placeholder {color: #999;} /* Internet Explorer 10-11 */
+th,td,td a{
+  font-size: 14px;
+  -webkit-color: #333;
+  color: #333;
+}
+button{border: 0;background: none;}
+
+.login,.header,.submenu_wrap,.submenu,
+.banner_wrap,.wrap,.menu_tab,.content,
+.foot_wrap{
+  min-width: 1248px;
+}
+.main_menu,.submenu,
+.banner_text,.banner_text,.menu_tab,.content,
+.foot,.app_wrap{
+  width: 1158px;
+}
+
+.container {
+    display: inline-block;
+    position: relative;
+    width: 27px;
+    height:27px;
+    /*margin-bottom: 12px;*/
+    margin-right: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  &:hover input ~ .checkmark {
+      background-color: #ccc; // enabled + unchecked box background color(when hover)
+  }
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width:auto;
+    height:auto;
+    &:checked ~ .checkmark {
+        background-color: #fff; // enabled + checked box background color
+    }
+    &:disabled ~ .checkmark {
+        display: block;
+        background-color : red; // disabled box background color
+    }
+    &:checked ~ .checkmark:after {
+        display: block;
+    }
+  }
+  .checkmark:after {
+      left: 8px;
+      top: 3px;
+      width: 5px;
+      height: 10px;
+      border: solid #4283df;
+      border-width: 0 2px 2px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+  }
+}
+.checkmark {
+  position: absolute;
+  /*top: 18px;*/
+  left: 0;
+  height: 23px;
+  width: 23px;
+  border: solid 1px #cccccc;
+  background-color: transparent; // enabled + unchecked box background color
+  &:after {
+      content: "";
+      position: absolute;
+      display: none;
+  }
+}
+
+.button_wrap {
+    text-align: right;
+    margin-bottom: 40px;
+}
+
+/*-----------메인메뉴 start--------------*/
+.login{
+  background:#1d2227;
+  width:100%;
+  height:34px;
+  line-height: 34px;
+  ul{
+    width:1158px;
+    margin: 0 auto;
+    overflow: hidden;
+    li{
+      font-size: 11px;
+      padding: 0 21px;
+      margin: 10px 0;
+      float: right;
+      color:rgba(255, 255, 255, 0.7);
+      line-height: 1;
+      &:first-child{
+        padding-right: 0;
+        border-left:solid 1px #3f4347;
+      }
+      a{
+        color:rgba(255, 255, 255, 0.7);
+      }
+    }
+  }
+}
+.login a:hover,
+.foot_menu>li>a:hover{text-decoration: underline;}
+
+.header{
+  width: 100%;
+  height:95px;
+  background: #23292f;
+  font-size:0;
+  text-align: center;
+}
+.mymenu:hover>a,
+.mymenu:focus{
+  color: #38c3ff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.main_menu{
+  display: inline-block;
+  margin: 0 auto;
+  &>li{
+    display: inline-block;
+    padding: 40px 25px 37px;
+    float: left;
+    &:first-child{
+      padding: 25px 67px 21px 0;
+      &:hover{
+        color: inherit;
+        background: inherit;
+      }
+    }
+    &:nth-child(2){
+      margin-left:0;
+    }
+
+    &.message_transfer{
+      float: right;
+      text-align: right;
+      padding:0;
+      position: relative;
+      &:hover{
+        color: inherit;
+        background: inherit;
+      }
+    }
+    &:last-child::after{
+      content: "";
+      color: #fff;
+      position: absolute;
+      /* top: 0; */
+      left: 94px;
+      line-height: 2.3;
+      font-size: 14px;
+    }
+    &:hover{
+      color: #fff;
+      background: #297cbd;
+      .submenu_wrap,
+      .submenu_wrap:hover{
+        display: block;
+      }
+    }
+    &:hover>a{
+      border-bottom: solid 1px #6aa1cc;
+      padding-bottom: 35px;
+      box-sizing: border-box;
+    }
+    &>a{
+      font-family: 'nanum-squre_R';
+      color: #fff;
+      font-size: 18px;
+      letter-spacing: -0.5px;
+    }
+    /*-----------메인메뉴 펼침 start--------------*/
+    .submenu{
+      text-align: left;
+      margin: 0 auto;
+      overflow: hidden;
+      &_wrap{
+        background: rgba(41, 124, 189, 0.95);
+        background-color: #297cbd;
+        opacity: 0.95;
+        text-align: center;
+        padding: 35px 0 40px;
+        position: absolute;
+        top: 129px;
+        // top: 145px \0/ie8;
+        left: 0;
+        width: 100%;
+        display: none;
+        z-index: 2;
+      }
+      // @media \0screen {&_wrap{top: 145px;}}
+      &>li{
+        margin-right: 80px;
+        width:125px;
+        display: inline-block;
+        float: left;
+        &:first-child{width: 140px;height:140px; margin: 0;}
+        &:last-child{margin-right:0;}
+        &:nth-child(5)>.depth2,
+        &:nth-child(6)>.depth2{margin-left: -2px;}
+      }
+      &_list{
+        overflow: hidden;
+        li{
+          font-size: 14px;
+          line-height: 1.8;
+        }
+      }
+      a{
+        color:#fff;
+        &:hover{text-decoration: underline;}
+      }
+    }
+    .depth2{
+      font-size: 16.5px;
+      margin-bottom:21px;
+    }
+    /*-----------메인메뉴 펼침 end--------------*/
+  }
+}
+
+
+/*-----------메인메뉴 메시지전송 팝업 start--------------*/
+.mymenu_select{
+  color: #f8f8f8;
+  cursor: pointer;
+  width: 127px;
+  height: 40px;
+  background: #2a85cc;
+  border-radius: 8px;
+  display: inline-block;
+  text-align: center;
+  font-size: 14px !important;
+  padding: 12px 13px 0 15px;/*20181227 수정*/
+  box-sizing: border-box;
+  &span{
+    color:#f8f8f8;
+  }
+  &img{
+    margin-left: 9px;/*20181227 수정*/
+  }
+  &_wrap{
+    display: inline-block;
+    margin-left: 17px;
+    padding:28px 0px 27px 0;
+    &:hover .mymenu_popup{/*드롭다운삭제시삭제*/
+      display: inline-block;
+      visibility: visible;
+      color:#000;
+    }
+  }
+}
+.mymenu_popup { /* Hidden by default */
+    position: absolute;; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    right:0;
+    top: 70px;
+    width: 127px; /* Full width */
+    height: auto; /* Full height */
+    text-align: left;
+    box-sizing: border-box;
+    display: none;
+    visibility: hidden;
+}
+
+.mymenu-content{
+  &.close {
+      background-color: #1d2227;
+      color:#cccccc;
+      border-radius: 4px;
+      border: 1px solid #363636;
+      width: 100%; /* Could be more or less, depending on screen size */
+      height: auto;
+      padding: 0px 15px;
+      margin:10px 0 0;
+      background-image: none;
+      position: initial;
+      box-sizing: border-box;
+  }
+  li {
+    color: #aaa;
+    float: none;
+    font-size: 15px;
+    margin-right: 0px;
+    letter-spacing: -1px;
+    padding: 10px 5px;
+    line-height: 1.4;
+    height: 20px;
+    border-bottom: solid 1px #2f363e;
+    &:last-child{border: 0}
+    a{color: #aaa;}
+  }
+  hr{
+    display: block;
+    width: 100%;
+    border: solid 1px #23292f;
+    margin: 8px 0;
+  }
+}
+/*-----------메인메뉴 메시지전송 팝업 end--------------*/
+/*-----------메인메뉴 end--------------*/
+
+
+
+.wrap{
+  min-height: calc(100vh - 88px);
+  height: auto;
+  position: relative;
+  font-size: 0;
+  margin: 0 auto;
+  padding-top: 89px;
+  &_content{
+    height: 100%;
+  }
+}
+
+
+.board .button_board{
+  background: #f7f7f7;
+  color: #333;
+  width: 85px;
+  height:36px;
+  line-height: 35px;
+  font-size: 14px;
+  border: solid 1px #cccccc;
+  /*position:inherit;*/
+}
+button.delete{
+  position: inherit;
+  font-size:0;
+  vertical-align: middle;
+  width: 21px;
+  height:21px;
+  background: url(../images/icon_delete.png)
+no-repeat}
+.width130{width: 130px;}
+.blue, .button_wrap .button_default.blue{background:#4283df;}
+.textblue{color:#4283df;    font-size: 13px;}
+.white{background: #fff;}
+.oper{border: solid 1px #e3e3e3;
+    color: #000;background: #fff;    vertical-align: -1px;}
+.button_default>img{vertical-align: -4px;}
+.button_default>.btn_new{vertical-align: -2px;margin-left: 5px;}
+
+
+
+
+
+
+/*-----foot start-------*/
+.foot_wrap{
+  width:100%;
+  background:#373737;
+  height: 184px;
+  padding:46px 0 42px 0;
+  box-sizing: border-box;
+}
+.foot{
+  overflow: hidden;
+  position: relative;
+  margin:0 auto;
+  color:#b4b4b4 !important;
+  font-size: 14px;
+}
+.foot_menu{overflow: hidden;    margin-bottom: 25px; float: left;    width: 80%;}
+.foot_menu>li{float: left;margin-right:30px;}
+.foot_menu>li>a{color:#b4b4b4 !important}
+.foot_text{line-height: 2.4;    float: left;}
+
+
+.logo_wrap{
+  float: right;
+  position: absolute;
+  right: 0;
+  top: 25px;
+}
+
+.btn_top{
+  position: fixed;
+    right: 20px;
+    bottom: 200px;
+    padding: 13px;
+    border-radius: 50%;
+    border: 0;
+    background: #f3f4f8;}
+
+
+/*-----foot end-------*/
+
+@media (max-width:1101px){
+  .login,.header,.submenu_wrap,.submenu,
+  .banner_wrap,.wrap,.menu_tab,.content,
+  .foot_wrap{
+    min-width: 1100px;
+  }
+  .login ul{
+    padding: 0px 47.5px;
+    width: 1005px;
+  }
+  .main_menu,.submenu,
+  .banner_text,.banner_text,.menu_tab,.content,
+  .foot,.app_wrap{
+    width: 1010px;
+  }
+  .main_menu>li {
+    padding: 40px 20px 37px;
+    &:first-child {
+    padding: 25px 50px 21px 0;
+    }
+    .submenu>li {
+    margin-right: 60px;
+    }
+  }
+}

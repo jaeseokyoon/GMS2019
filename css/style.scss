@@ -1,0 +1,1031 @@
+* {margin:0;padding:0;
+  font-family:'malgun gothic','','myriad-pro','NanumGothic', 'Dotum', 'Gulim', 'sans-serif';}
+html, body{height:100%; margin:0;padding:0;color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body{height:auto; color:#222;-webkit-text-size-adjust:none;word-break:keep-all;}
+p,ul,ol,li,dl,dt,dd,form {list-style-image:none;list-style-position:outside;list-style-type:none;border:0px;
+margin-block-start:0;margin-block-end:0;padding-inline-start:0;}
+img,fieldset, frameset, frame {border:0;}
+a, img, span, b, input, select, em, textarea,  strong{outline-style:none;}
+a{color:#333;}
+table{
+  width:100%;
+  border-collapse:collapse;
+  table-layout:fixed;
+}
+select{
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  -o-appearance:none;
+   appearance:none;
+}
+select::-ms-expand {display:none}
+
+
+/*서브 페이지 추가 start*/
+
+/*버튼, 탭버튼 스타일 공통영역 start*/
+
+/*페이지 버튼 start*/
+.pagebtn {
+  width: 100%;
+  margin: 20px 0 35px;
+  text-align: center;
+  ul {
+    width: auto;
+    margin: 0 auto;
+    display: inline-block;
+  }
+  li {
+    width: 32px;
+    border: solid 1px #e1e1e1;
+    height: 32px;
+    line-height: 32px;
+    margin: 0 2px;
+    color: #777;
+    float: left;
+    img{
+      vertical-align: -2px;
+    }
+  }
+  .page_cuser{
+      background: #f7f7f9;
+  }
+}
+.page_num.active{
+  background: #4283df;
+  color: #fff;
+}
+/*페이지 버튼 end*/
+
+
+/*탭버튼 start*/
+ul.tabs{
+    margin: 0;
+    padding: 0;
+    float: left;
+    list-style: none;
+    height: auto;
+    border-left: 1px solid #eaeaea;
+    width: 100%;
+    font-size: 14px;
+  li{
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    width: 33%;
+    height: 43px;
+    color:#666;
+    line-height: 43px;
+    border-top: solid 1px #eaeaea;
+    border-bottom: 1px solid #333333;
+    border-left: none;
+    /* font-weight: bold; */
+    font-size:15px;
+    background: #fafafa;
+    overflow: hidden;
+    position: relative;
+    &>a{color:#666;}
+    &:last-child{border-right: 1px solid #eaeaea;}
+    &.active {
+      background: #FFFFFF;
+      color:#000;
+      height: 41px;
+      line-height: 41px;
+      border-bottom: 1px solid #FFFFFF;
+      border-top: solid 3px #2a85cc;
+      border-left: 1px solid #333;
+      border-right: 1px solid #333;
+      a{color:#000;}
+    }
+  }
+}
+.img_point{vertical-align: middle;margin-right: 5px;}
+
+.tab_container{
+  clear: both;
+  float: left;
+  width: 100%;
+  background: #FFFFFF;
+  .tab_content{
+    font-size: 14px;
+    display: none;
+    ul {
+      width:calc(100% - 30px);
+      width: 95%;
+      margin:0px;
+      padding: 18px 15px;
+      line-height: 1.8;
+      li {
+        list-style:none;
+        font-size: 14px;
+        letter-spacing: -1px;
+      }
+    }
+    table{
+      border-top: solid 1px #ccc;
+      border-bottom: solid 1px #e5e5e5;
+      .top_border{
+        border-top: solid 1px #e5e5e5;
+      }
+
+      .anather_border{
+        border-top: solid 1px #e5e5e5;
+        border-bottom:0px;
+      }
+      th{
+        background: #f7f7f9;
+      }
+      th,td{
+        padding:15px 14px;
+        color: #333;
+        text-align: center;
+        letter-spacing: -0.5px;
+      }
+    }
+    .search_info{
+      text-align: center;
+      /* padding-top: 35px; */
+      height: 276px;
+      th,
+      td{
+        font-weight: 400;
+      }
+    }
+  }
+}
+.TextAlignLeft td{text-align: left !important;}
+.paddingLR0 td,.paddingLR0 th
+{padding-left:0!important;padding-right:0 !important; }
+/*탭버튼 end*/
+
+
+/*버튼 start*/
+.SMSlist_search button,
+.search_num button,
+button.search,
+.search_btn{
+  background: #2a85cc;
+  color: #fff;
+  border: solid 1px #2a85cc;
+  font-size: 16px;
+  width:100px;
+  height:42px;
+  vertical-align: top;
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: center;
+  line-height: 42px;
+  margin-left: 5px;
+}
+.search_num button.middle{vertical-align: top;}
+.search_num button>img,
+.SMSlist_search button>img,
+button.search>img,
+.search_btn>img{vertical-align: -2px;margin-left: 5px;}
+/*버튼 end*/
+
+/*버튼,탭버튼 스타일 공통영역 end*/
+
+
+
+/*서브 페이지 스타일 start*/
+
+.app_wrap{
+  min-height: calc(100vh - 88px);
+  height: auto;
+  position: relative;
+  /* z-index: -1; */
+  font-size: 0;
+  margin: 0 auto;
+  h3{
+    font-size: 17px;
+    font-family: 'nanum-squre_B';
+  }
+}
+
+.num_registration{
+  font-size: 14px;
+  margin: 40px 0 30px 0;
+  display: inline-block;
+  width:100%;
+  h1{
+    font-size:23px;
+    margin-bottom: 30px;
+    font-family: 'nanum-squre_B';
+  }
+  .info_wrap{
+    background: #f7f7f9;
+    border: solid 1px #c7c7c7;
+    color:#444;
+    padding: 24px 30px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    font-size: 14px;
+    &.search_wrap{
+      text-align: center;
+      padding:20px;
+      font-size: 0;
+      span{vertical-align: middle;}
+    }
+  }
+  .left_wrap,
+  .right_wrap{float: left;}
+
+  .left_wrap{width: 59%;}
+  .right_wrap{
+    width:calc(38% - 30px);
+    width:38%;
+    margin-left:30px;
+  }
+  /* .num_registration input,
+  .num_registration button{
+    height: 38px;
+    border: solid 1px #ccc;
+    box-sizing: border-box;
+  } */
+  input[type=tel]{text-align: center;}
+}
+.search_wrap_days{font-size: 16px;}
+.input_search_title{font-size: 16px; margin-right: 5px;font-weight: 600;}
+input.search{
+  width:170px;
+  height: 42px;
+  margin: 0 5px;
+  border-color: #c7c7c7;
+}
+
+.btn_table_close{
+  background: none;
+  border: 0;
+}
+input[type=radio]{
+  display: none;
+  &+label{
+    background: #fff;
+    display: inline-block;
+    padding: 4px;
+    border: solid 1px #bdbdbd;
+    border-radius: 50%;
+    font-size: 0;
+    margin-left: 30px;
+    vertical-align: baseline;
+    &>span{
+      background: #fff;
+      padding: 5px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+  }
+  @media \0screen {&+label{display: none;}}
+  &:checked+label>span{
+    background: #2a85cc;
+  }
+}
+@media \0screen {input[type=radio]{display: inline-block;vertical-align:-2px;margin-left: 10px;}}
+.margin0{margin-left: 0 !important;}
+
+.phone_num{
+  width: 55px;
+  height: 38px;
+  // line-height: 37px;
+  padding: 8.5px;
+  border: solid 1px #ccc;
+  box-sizing: border-box;
+  margin: 0 3px;
+  &:first-child{margin-left: 0;}
+  &+span{
+    font-size: 19px;
+    font-weight: 100;
+    vertical-align: -2px;
+  }
+  &.wide {width:87px; }
+}
+
+
+.btn_confirm{
+  width: 80px;
+  height: 38px;
+  color:#666;
+  border: solid 1px #ccc;
+  background: #f3f6ff;
+  box-sizing: border-box;
+  margin: 0 3px;
+  font-size:14px;
+  // vertical-align: top;
+}
+.default_input{
+  width: 192px;
+  padding-left: 15px;
+  height: 38px;
+  padding: 8.5px 5px 8.5px 10px;
+  border: solid 1px #ccc;
+  box-sizing: border-box;
+  margin-right: 5px;
+  font-size: 14px;
+  &::-webkit-input-placeholder{//사파리 플레이스 홀더
+    line-height: 22px;
+    letter-spacing: -1.5px;
+  }
+}
+
+.data_table_wrap{
+  width: 100%;
+  border-top: solid 2px #2a85cc;
+  margin: 10px auto;
+  display: inline-block;
+  tr{
+    border-bottom: solid 1px #e7e7e7;
+  }
+  th{
+    background: #f7f7f9;
+  }
+  th,td{
+    height:48px;
+    padding: 10px 0;
+    font-weight: 400;
+    color: #333;
+    vertical-align: middle;
+    text-align: center;
+    letter-spacing: -0.5px;
+    line-height: 1.8;
+  }
+  /*th:first-child,
+  td:first-child{padding:0 20px;}
+  th:last-child,
+  td:last-child{padding:0 20px;} */
+  table.style_col.wide th{width:145px;}
+  table.style_col.wide th,
+  table.style_col.wide td{
+    padding-left: 20px;
+    text-align: left;
+    min-height:66px;
+  }
+}
+.btn_num{
+  background: #f7f7f7;
+  /* width: 106px; */
+  height: 38px;
+  padding: 0 13px;
+  font-size: 14px;
+  border: solid 1px #cfcfcf;
+  line-height: 37px;
+}
+.btn_demo{
+  background: #f7f7f7;
+  height: 38px;
+  padding: 0 19px;
+  font-size: 14px;
+  border: solid 1px #cfcfcf;
+  line-height: 37px;
+  margin-left:20px;
+}
+
+.data_btn_wrap {
+    width: 100%;
+    text-align: right;
+    padding-top: 10px;
+}
+.default_on,.default_off {
+    width: 100px;
+    height:42px;
+    box-sizing: border-box;
+    font-size: 16px;
+    border: 0;
+    color: #fff;
+}
+.default_on {
+  background: #2a85cc;
+  margin-right: 6px;
+}
+.default_off {
+  background: #6b7175;
+}
+
+.select_month{
+  &_wrap{display: inline-block;}
+  width: 170px;
+  height: 42px;
+  padding:9.5px 10px;
+  margin-right:5px;
+  font-size: 14px;
+  border: 1px solid #c7c7c7;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url('../images/icon_select_arrow.png') no-repeat top 15px right 10px #fff; /* 화살표 아이콘 추가 */
+  &:focus,
+  &:checked,
+  &:target {background-color: #fff;}
+  &:-ms-expand {
+     display: none;
+     background-color: #fff;
+  }
+}
+.select_phone {
+    font-size: 14px;
+    background: url(/_img/icon_select_arrow_small.png) no-repeat top 13px right 10px #fff;
+}
+.day_search{
+  width: 100px;
+  background: #fff;
+  height: 42px;
+  margin: 0 5px;
+  border: solid 1px #ccc;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.data_title{
+  background: #f7f7f9;
+  font-size: 14px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  border: solid 1px #e5e5e5;
+}
+
+.down{color: #d32f2f;}
+.up{color: #005fa9;}
+.btn_exceldown {
+    background: url('../images/icon_excel.png') no-repeat 10% 50% #fff;
+    float: right;
+    border: solid 1px #ccc;
+    width: 140px;
+    text-align: center;
+    padding-left: 30px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    margin: 0px;
+    color: #333;
+    box-sizing: border-box;
+}
+.btn_plus {
+    background: url('../images/icon_plus.png') no-repeat 21% 50% #fff;
+    float: right;
+    border: solid 1px #ccc;
+    width: 75px;
+    text-align: center;
+    padding-left: 15px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    margin: 0px;
+    font-family: 'malgun gothic';
+    color: #333;
+    box-sizing: border-box;
+}
+.pagebtn.margin_clear{margin: 20px 0 0px;}
+
+.style_col th{
+  width: 110px;
+  letter-spacing: -1px;
+}
+.style_col th,
+.style_col td{
+  text-align: left;
+  padding:10px 20px;
+  box-sizing: border-box;
+}
+.style_col.wide td,
+.style_col.wide th{
+  text-align: left;
+  padding-left: 30px;
+  box-sizing: border-box;
+  }
+
+input.money{width:195px;}
+input.bank{width:288px;}
+.bank_info{
+  margin: 30px 0;
+  h3{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-family: 'malgun gothic';
+  }
+  ul{
+    font-size: 14px;
+    line-height: 2;
+  }
+  li{padding-left: 10px;}
+}
+ul.tabs.wide{
+  margin-bottom: 30px;
+  &>li{
+    width: 16.62%;
+    height:50px;
+    line-height: 50px;
+    font-size:14px;
+    &.active{
+      height:48px;
+      line-height: 48px;
+    }
+  }
+}
+
+/*서브 페이지 스타일 end*/
+
+/*서브 페이지 추가 end*/
+
+
+/*팝업 페이지 스타일 start*/
+.popup_wrap{
+  width: 860px;
+  margin: 0 auto;
+}
+
+.popup_header{
+  height: 56px;
+  padding: 23px 60px;
+  border-top: solid 2px #2a85cc;
+  border-bottom: solid 1px #ccc;
+}
+.popup_header_info{
+  float: right;
+  text-align: right;
+  font-size:14px;
+  button{
+    border: 0;
+    background: #fff;
+    font-size: 13.5px;
+    color: #666;
+    margin-left: 25px;
+    padding: 5px 0 10px;
+    img{
+      vertical-align: -6px;
+      margin-right: 5px;
+    }
+  }
+  &>.sms_info{
+    letter-spacing: -0.25px;
+  }
+}
+
+.popup_phone{
+  width:274px;
+  height:600px;
+  margin-right: 56px;
+  background: url(../images/popup_phone.png) no-repeat top center;
+  float: left;
+  &_btn_wrap{
+    width:100%;
+    text-align:center;
+    padding-top: 25px;
+  }
+}
+.popup_phone_info{
+  width: 241px;
+  height: 396px;
+  margin: 59px 15px;
+  border: solid 2px #e6e6e6;
+  position: relative;
+  &>h3{
+    font-size: 15px;
+    background: #f7f7f9;
+    padding: 15px;
+    letter-spacing: -0.5px;
+  }
+}
+.popup_phone_info_text{
+  font-size: 14px;
+  color: #666;
+  li{font-size: 13.5px;}
+  span{color:#999;}
+}
+.popup_phone_info_btn{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  li{
+    font-size: 11.5px;
+    line-height: 1.5;
+    text-align: center;
+    color: #333333;
+    /* font-weight: 600; */
+    float: left;
+    background: #f7f7f9;
+    border-top: solid 1px #e6e6e6;
+    border-left: solid 1px #e6e6e6;
+    width: calc(25% - 0.75px);
+    width: 59.5px;
+    &:first-child{
+      border-left: 0;
+    }
+    &:hover,
+    &.active,
+    &.active>a{
+      background: #2a85cc;
+      color: #fff;
+    }
+    &>a{
+      color:#333;
+      width: 100%;
+      height: auto;
+      display: inline-block;
+      padding: 12px 0;
+    }
+    &:hover>a{color: #fff;}
+  }
+}
+.default_big_off,
+.default_big_on{
+  padding: 15px 30px;
+  font-size: 16px;
+  border: 0;
+  color: #fff;
+}
+.default_big_off{background: #6b7175;}
+.default_big_on{background: #2a85cc;margin-left: 6px;}
+
+.popup_content_wrap{
+  overflow: hidden;
+    padding: 55px 60px;
+}
+
+.popup_content{
+  width:410px;
+  float: left;
+}
+ul.tabs {
+    margin: 0;
+    padding: 0;
+    float: left;
+    list-style: none;
+    height: auto;
+    border-left: 1px solid #eaeaea;
+    width: 100%;
+    font-size: 14px;
+  li{
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    width: 33%;
+    height: 43px;
+    color:#666;
+    line-height: 43px;
+    border-top: solid 1px #eaeaea;
+    border-bottom: 1px solid #333333;
+    border-left: none;
+    /* font-weight: bold; */
+    font-size:15px;
+
+    background: #fafafa;
+    overflow: hidden;
+    position: relative;
+    &>a{color:#666;}
+    &:last-child{border-right: 1px solid #eaeaea;}
+    &.active {
+      background: #FFFFFF;
+      color:#000;
+      height: 41px;
+      line-height: 41px;
+      border-bottom: 1px solid #FFFFFF;
+      border-top: solid 3px #2a85cc;
+      border-left: 1px solid #333;
+      border-right: 1px solid #333;
+      &>a{color:#000;}
+    }
+  }
+}
+
+
+
+.search_info_title{
+  padding-top: 59px;
+  padding-bottom: 10px;
+  height: 87px;
+  overflow: hidden;
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 15px;
+  font-weight: 400;
+}
+.btn_adress_search{
+  background: #fff;
+  border: solid 1px #ccc;
+  width: 100px;
+  text-align: center;
+  padding: 0px 0px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 14px;
+  margin: 20px 0 10px;
+  /* font-weight: 600; */
+  color: #333;
+  box-sizing: border-box;
+}
+.search_num {
+  padding-top: 35px;
+  padding-bottom: 10px;
+  /* font-weight: 600; */
+  text-align: right;
+  height: 87px;
+  box-sizing: border-box;
+  input{
+    padding: 13px 20px;
+    box-sizing: border-box;
+    font-weight: 400;
+    height:42px;
+    border: solid 1px #cccccc;
+    margin:0 5px;
+  }
+}
+
+
+ #container {
+    width: 249px;
+    margin: 0 auto;
+}
+
+
+#layer_popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+}
+.popup_notice {
+    background-color: #fefefe;
+    margin: 8% auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    position: relative;
+    width: 510px;
+    height: auto;
+}
+
+.popup_notice_title,
+.popup_SMSlist_title{
+    text-align: center;
+    height: 72px;
+    font-size: 20px;
+    line-height: 72px;
+    font-family: 'nanum-squre_B';
+    margin-bottom: 30px;
+    background: #f1f1f1;
+    border-bottom: solid 1px #e2e2e2;
+}
+.popup_SMSlist_title>span{
+  font-family: 'nanum-squre-R';
+  font-size: 14px;
+  padding-top: 2px;
+  position: absolute;
+  left: 25px;
+  color: #6b6b6b;
+  letter-spacing: -0.5px;
+  }
+.close0,
+.close0_1,
+.close1{
+    color: #aaa;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 26px;
+    height: 26px;
+    font-size: 28px;
+    margin-right: 23px;
+    margin-top: 22px;
+    background: url(../images/close.png) no-repeat;
+    /* line-height: 1.7; */
+}
+.popup_notice_content,
+.popup_SMSlist_content{
+  border: 0;
+  width: calc(100% - 55px);
+  width: 89.25%;
+  text-align: left;
+  margin: 0 auto;
+  font-size: 13.5px;
+  line-height: 1.8;
+}
+.popup_notice_content>h3{
+  // font-weight: 600;
+  // font-size: 15.5px;
+  letter-spacing: -1px;
+  font-size: 17px;
+  letter-spacing: -1px;
+  font-family: "nanum-squre_B";
+}
+.btn_guidedown{
+  background: #fff;
+  border: solid 1px #ccc;
+  width: 215px;
+  text-align: center;
+  padding: 0px 0px;
+  height:35px;
+  line-height: 35px;
+  font-size: 14px;
+  margin: 10px 0 20px;
+  /* font-weight: 600; */
+  color: #333;
+  box-sizing: border-box;
+  img{
+    vertical-align: -3px;
+    margin-left: 15px;
+  }
+}
+.popup_notice_content>ul>li{
+  color:#666666;
+  margin-bottom: 13px;
+  font-size: 13px;
+  padding-left: 5px;
+  line-height: 1.7;
+}
+.popup_notice_content>ul>li>.icon_list{margin-left: -5px;}
+.popup_notice_content>ul>li:last-child{margin: 0;}
+.button_wrap.popup{
+  /*position:absolute;
+  bottom:50px;*/
+  width: 100%;
+  text-align: center;
+  margin:25px 0 50px;
+  display: inline-block;
+}
+.blue, .button_wrap .button_default.blue {
+    background: #2a85cc;
+    border: solid 1px #2a85cc;
+    color:#fff;
+}
+
+
+.popup_SMSlist {
+    background-color: #fefefe;
+    margin: 8% auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    position: relative;
+    width: 435px;
+    height: auto;
+}
+
+.SMSlist_info{
+  text-align: center;
+  }
+.SMSlist_search{
+  padding: 20px;
+  background: #f7f7f9;
+  border: solid 1px #c7c7c7;
+  margin-bottom:30px;
+  input{
+    width:205px;
+    padding: 13px 10px 13px 13px;
+    height:44px;
+    box-sizing: border-box;
+    border: solid 1px #c7c7c7;
+    margin: 0 5px;
+    letter-spacing: -1.5px;
+  }
+}
+
+.popup_SMSlist_button_wrap{
+  text-align: left;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.popup_SMSlist_num{
+  position: absolute;
+  bottom:-4px;
+  left: 10px;
+  font-weight: 600;
+  &>span{color: #2a85cc;}
+}
+
+.popup_SMSlist_table_wrap{
+  text-align: center;
+  height: 225px;
+  border-bottom: solid 1px #e5e5e5;
+  }
+.popup_SMSlist_content table{
+  border-top: solid 1px #ccc;
+    border-bottom: solid 1px #e5e5e5;
+}
+.popup_SMSlist_content th,
+.popup_SMSlist_content td{
+  padding: 10px 5px;/*20181228 수정*/
+  font-weight: 400;
+  color: #333;
+  font-size: 13px;
+}
+.popup_SMSlist_content th{    background: #f7f7f9;}
+
+.list_button{
+  border: solid 1px #c7c7c7;
+  background: #fff;
+  width: 100px;
+  height: 35px;
+  line-height: 34px;
+  color: #676767;
+  margin-left: 5px;
+  font-size: 13px;
+  /* font-weight: 600; */
+  box-sizing: border-box;
+  float: right;
+}
+.btn_exceldown {
+    background: url('../images/icon_excel.png') no-repeat 10% 50% #fff;
+    float: right;
+    border: solid 1px #ccc;
+    width: 140px;
+    text-align: center;
+    padding-left: 30px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    margin: 0px;
+    color: #333;
+    box-sizing: border-box;
+}
+
+
+
+/*팝업 default start*/
+.popup_default {
+    background-color: #fefefe;
+    margin: 8% auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    position: relative;
+    width: 510px;
+    height: auto;
+  &_title{
+      text-align: center;
+      height: 72px;
+      font-size: 20px;
+      line-height: 72px;
+      font-family: 'nanum-squre_B';
+      background: #f1f1f1;
+      border-bottom: solid 1px #e2e2e2;
+  }
+  &_content{
+    border: 0;
+    width: 89%;
+    width: calc(100% - 55px);
+    text-align: left;
+    margin: 30px auto;
+    font-size: 13.5px;
+    line-height: 1.8;
+  }
+}
+.popup_button_wrap{
+  width: 100%;
+  text-align: center;
+  margin:0 0 50px;
+  display: inline-block;
+}
+.button_default{
+    border: solid 1px #c7c7c7;
+    background: #f0f0f0;
+    width: 90px;
+    height: 42px;
+    line-height: 40px;
+    color: #222222;
+    margin-left: 7px;
+    letter-spacing: -1px;
+    font-size: 17px;
+    box-sizing: border-box;
+}
+.blue,
+.button_wrap .button_default.blue {
+    background: #2a85cc;
+    border: solid 1px #2a85cc;
+    color:#fff;
+}
+/*팝업 default end*/
+/*팝업 페이지 스타일 end*/
+
+textarea::placeholder{color:#999;}
+textarea:-ms-input-placeholder{color: #999;} /* Internet Explorer 10-11 */
+textarea,input{font-size: 14px;}
+textarea{
+  line-height: 1.7;
+  padding: 15px;
+  border: 1px solid #ccc;
+  width: 100%;
+  margin: 0px;
+  resize: none;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+textarea,input{
+  border-radius: 0;
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+}
+.popup_phone_info_text>textarea{
+  border: 0;
+  height:290px;
+  &:after{
+    content: "SMS (1~80 Byte) <br/> LMS (80~2,000 Byte)";
+  }
+}
+.search_num input{width: 192px;}
