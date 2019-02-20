@@ -10,7 +10,8 @@
   	<title>GMS for Business</title>
 
 
-    <link rel="stylesheet" href="css/style1.min.css">
+    <link rel="stylesheet" href="css/style_common.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/normalize.css">
@@ -186,12 +187,12 @@
         <div class="data_table_wrap">
           <table>
             <colgroup>
-              <col width="15%"/><!-- 빈칸 -->
-              <col width="15%"/><!-- 알림톡 -->
-              <col width="20%"/><!-- 친구톡 -->
-              <col width="10%"/><!-- 친구톡 -->
-              <col width="20%"/><!-- 친구톡 -->
-              <col width=""/><!-- 문자메시지 -->
+              <col width="15%"/><!-- 업체 이름 -->
+              <col width="15%"/><!-- 업체 아이디 -->
+              <col width="20%"/><!-- 최근 접속 -->
+              <col width="10%"/><!-- 약관 -->
+              <col width="20%"/><!-- 승인일 -->
+              <col width=""/><!-- 발신번호 관리 -->
             </colgroup>
             <thead>
               <tr>
@@ -283,6 +284,12 @@
 
         <div class="data_table_wrap">
           <table>
+            <colgroup>
+              <col width="15%"/><!-- NO -->
+              <col width=""/><!-- 발신번호((주)테스트) -->
+              <col width="25%"/><!-- 인증상태 -->
+              <col width="15%"/><!-- 삭제 -->
+            </colgroup>
             <thead>
               <tr>
                 <th>
@@ -585,56 +592,70 @@
                   <input  class="default_input search" type="text">
                   <button class="search">조회<img src="./images/popup_search.png"></button>
               </div>
-              <h3>발신번호 관리</h3>
+              <h3>메시지 전송</h3>
               <div class="data_table_wrap">
                 <table class="style_col wide">
                   <tbody>
                     <tr>
                       <th>
-                        충전수단
+                        API명
                       </th>
                       <td>
-                          무통장입금 (기업은행 : 592-02099-01-026, 예금주 : (주)지어소프트)
-                          <button class="btn_demo">DEMO</button>
+                          api.send<button class="btn_demo">DEMO</button>
                       </td>
                     </tr>
                     <tr>
                       <th>
-                        충전금액
+                        API URL
                       </th>
                       <td>
-                        <input class="default_input money" type="text" placeholder="100,000원 이상 가능"><span>원</span>
+                        http://meg.oasis.co.kr/api.send
                       </td>
                     </tr>
                     <tr>
                       <th>
-                        입금자명
+                        Method
                       </th>
                       <td>
-                        <input class="default_input bank" type="text" placeholder="실제 통장에 표기되는 입금자명을 입력해 주세요.">
+                        POST
                       </td>
                     </tr>
                     <tr>
                       <th>
-                        핸드폰번호
+                        API 설명
                       </th>
                       <td>
-                        <input class="phone_num wide" type="tel"><span>-</span><input class="phone_num wide" type="tel"><span>-</span><input class="phone_num wide" type="tel">
+                        SMS, LMS 메시지 전송
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        비고
+                      </th>
+                      <td>
+                        같은 내용의 메시지를 한 번에 1,000명에게 전송 할 수 있습니다.<br/>
+                        MMS(사진첨부) 메시지 전송 기능은 지원하지 않습니다.
                       </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
             </div>
-            <!-- #tab1 -->
             <div id="tab2" class="tab_content">
-            2222
+            전송내역 조회
             </div>
-            <!-- #tab2 -->
             <div id="tab3" class="tab_content">
-            3333Halo:
+            전송내역 상세조회
             </div>
-            <!-- #tab3 -->
+            <div id="tab4" class="tab_content">
+            전송가능 건수
+            </div>
+            <div id="tab5" class="tab_content">
+            예약내역 조회
+            </div>
+            <div id="tab6" class="tab_content">
+            예약전송 취소
+            </div>
         </div>
       </div>
     </div>

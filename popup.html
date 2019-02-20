@@ -4,15 +4,16 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" id="X-UA-Compatible" content="IE=edge" />
   <meta name="format-detection" content="telephone=no,address=no,email=no">
-	<meta name="viewport" content="width=1248">
+	<meta name="viewport" content="width=860">
 	<link rel="shortcut icon" href="https://gms.oasis.co.k/bizmessage/intro.do/images/gaeasoft_favicon.ico" />
 	<link rel="icon" type="image/x-icon" href="https://gms.oasis.co.k/bizmessage/intro.do/images/gaeasoft_favicon.ico" />
 	<title>GMS for Business</title>
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style_common.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="stylesheet" href="css/font.css">
-  <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
-  <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="./js/jquery.bpopup.min.js"></script>
 </head>
 <body>
   <div class="popup_wrap">
@@ -23,7 +24,7 @@
           <img src="./images/popup_icon_sound.png">수신거부해제
         </button>
       <!-- Modal content start-->
-        <div id="myModal0"  class="modal">
+        <div id="myModal0"   style="display:none;">
           <div class="popup_SMSlist">
 
             <h3 class="popup_SMSlist_title">
@@ -45,6 +46,12 @@
                 </div>
                 <div class="popup_SMSlist_table_wrap">
                   <table>
+                    <colgroup>
+                      <col width="20%"/><!-- NO. -->
+                      <col width="20%"/><!-- 상태 -->
+                      <col width=""/><!-- 전화번호 -->
+                      <col width="20%"/><!-- 이름 -->
+                    </colgroup>
                     <thead>
                       <tr>
                         <th>NO.</th>
@@ -86,7 +93,7 @@
           <img src="./images/popup_icon_call.png">공지 & 도움말
         </button>
         <!-- Modal content start-->
-        <div id="myModal1"  class="modal">
+        <div id="myModal1"  style="display:none;">
           <div class="popup_notice">
 
             <h3 class="popup_notice_title">공지 & 도움말</h3><span class="close1 b-close">&nbsp;</span>
@@ -112,8 +119,8 @@
               </ul>
             </div>
             <div class="button_wrap popup">
-              <button type="button" class="button_default blue">확인</button>
-              <button type="button" class="button_default close1_1">닫기</button>
+              <button type="button" class="button_default b-close blue">확인</button>
+              <button type="button" class="button_default b-close close1_1">닫기</button>
             </div>
           </div>
         </div>
@@ -171,7 +178,7 @@
               </li>
             </ul>
             <div>
-              <table class="top_border">
+              <table class="TextAlignLeft top_border">
                 <tbody>
                   <tr>
                     <td class="font_bold">
@@ -191,6 +198,11 @@
             </div>
             <div class="search_info">
               <table>
+                <colgroup>
+                  <col width="20%"/><!-- NO. -->
+                  <col width=""/><!-- 전화번호 -->
+                  <col width="20%"/><!-- 삭제 -->
+                </colgroup>
                 <thead>
                   <tr>
                     <th>NO.</th>
@@ -211,6 +223,11 @@
             </div>
             <div>
               <table class="anather_border">
+                <colgroup>
+                  <col width="20%"/>
+                  <col width=""/>
+                  <col width="20%"/>
+                </colgroup>
                 <tbody>
                   <tr>
                     <td class="font_bold">회신번호</td>
@@ -234,7 +251,7 @@
               </li>
             </ul>
             <div>
-              <table class="top_border">
+              <table class="top_border TextAlignLeft">
                 <tbody>
                   <tr>
                     <td class="font_bold">
@@ -250,6 +267,11 @@
             <div class="search_info">
               <h3 class="search_info_title">수신번호 그룹<button class="list_button" style="margin-top: -17px;">주소록 등록</button></h3>
               <table>
+                <colgroup>
+                  <col width="20%"/><!-- NO. -->
+                  <col width="%"/><!-- 전화번호 -->
+                  <col width="20%"/><!-- 삭제 -->
+                </colgroup>
                 <thead>
                   <tr>
                     <th>NO.</th>
@@ -270,6 +292,11 @@
             </div>
             <div>
               <table class="anather_border">
+                <colgroup>
+                  <col width="20%"/><!-- NO. -->
+                  <col width="%"/><!-- 전화번호 -->
+                  <col width="20%"/><!-- 삭제 -->
+                </colgroup>
                 <tbody>
                   <tr>
                     <td class="font_bold">회신번호</td>
@@ -296,7 +323,17 @@
               </li>
             </ul>
             <div class="search_info">
-              <table>
+              <table class="paddingLR0">
+                <colgroup>
+                  <col width="%"/><!-- 메시지 -->
+                  <col width="15%"/><!-- 전송일 -->
+                  <col width="10%"/><!-- 타입 -->
+                  <col width="10%"/><!-- 타입 -->
+                  <col width="10%"/><!-- 건수 -->
+                  <col width="10%"/><!-- 성공 -->
+                  <col width="10%"/><!-- 실패 -->
+                  <col width="10%"/><!-- 대기 -->
+                </colgroup>
                 <thead>
                   <tr>
                     <th>메시지</th>
@@ -325,6 +362,11 @@
             </div>
             <div>
               <table class="anather_border">
+                <colgroup>
+                  <col width="20%"/><!-- NO. -->
+                  <col width="%"/><!-- 전화번호 -->
+                  <col width="20%"/><!-- 삭제 -->
+                </colgroup>
                 <tbody>
                   <tr>
                     <td class="font_bold">회신번호</td>
@@ -342,8 +384,16 @@
   </div>
 
 <!-- 샘플 팝업 start -->
+<div class="popup_phone_btn_wrap"style="margin-bottom:20px;">
+  <button class="default_big_off" id="defaultBtn0">
+    기본팝업
+  </button>
+</div>
+<div id="defaultModal0" style="display:none;">
   <div class="popup_default">
     <h3 class="popup_default_title">기본 팝업</h3>
+    <span class="close0_1 b-close">&nbsp;</span>
+
     <div class="popup_default_content">
       <p>
         - 회신번호 (보내는 번호) 변경을 원하실 경우, [메세지 전송] 탭 > 하단 “회신번호 변경” 에서 변경할 회신번호 (보내는번호) 선택 후, [회신번호 변경] 버튼 클릭 하시면 됩니다.
@@ -353,10 +403,11 @@
       <textarea style="height:300px"></textarea>
     </div>
     <div class="popup_button_wrap">
-      <button type="button" class="button_default blue">확인</button>
-      <button type="button" class="button_default close1_1">닫기</button>
+      <button type="button" class="button_default b-close blue">확인</button>
+      <button type="button" class="button_default b-close close1_1">닫기</button>
     </div>
   </div>
+</div>
 <!-- 샘플 팝업 end -->
 
   <script type="text/javascript" src="./js/index.js"></script>
