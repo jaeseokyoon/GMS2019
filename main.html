@@ -57,15 +57,14 @@
           });
         }
         findPosition();
-
+        //top으로 이동 start
+        var topEle = $('#topBtn');
+        var delay = 500;
+        topEle.on('click', function() {
+          $('html').stop().animate({scrollTop: 0}, delay);
+        });
+        //top으로 이동 end
     });
-    //top으로 이동 start
-    var topEle = $('#topBtn');
-    var delay = 500;
-    topEle.on('click', function() {
-      $('html').stop().animate({scrollTop: 0}, delay);
-    });
-    //top으로 이동 end
   </script>
 
 </head>
