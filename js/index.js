@@ -15,28 +15,47 @@ $(function () {
 });
 //popup 탭메뉴 end
 
-//모달팝업 start
+//모달팝업 start22
 
 ;(function($) {
     $(function() {
-				$('#myBtn0').bind('click', function(e) {
-						e.preventDefault();
-						$('#myModal0').bPopup({
-							follow: [false, false]
-						});
+			// for (var i = 0; i <= 1; i++){
+			// 	$('#myBtn'+ i).bind('click', function(e) {
+			// 		e.preventDefault();
+			// 		$('#myModal'+ i).bPopup({
+			// 			follow: [false, false]
+			// 		});
+			// 	});
+			// 	alert(i);
+			// };
+
+			for (var i = 0; i <= 10; i++){
+
+				$("#myBtn"+i).data({pop:$("#myModal"+i)});//$(선택요소).data(데이터속성에 사용된 이름)
+				// html5에서는 태그에 데이터를 저장할 수 있음.
+				//.data메소드를 활용해 "pop"에 ""#myModal"+i"를 만들어 저장
+
+				$('#myBtn'+ i).on("click",function(e){//클릭하면
+					e.preventDefault();
+					$(this).data("pop").bPopup({//미리 만들어 놓은 "pop"를 오픈
+						follow: [false, false]
+					});
 				});
-        $('#myBtn1').bind('click', function(e) {
-            e.preventDefault();
-            $('#myModal1').bPopup({
-              follow: [false, false]
-            });
-        });
-				$('#defaultBtn0').bind('click', function(e) {
-            e.preventDefault();
-            $('#defaultModal0').bPopup({
-              follow: [false, false]
-            });
-        });
+
+			};
+
+        // $('#myBtn1').bind('click', function(e) {
+        //     e.preventDefault();
+        //     $('#myModal1').bPopup({
+        //       follow: [false, false]
+        //     });
+        // });
+				// $('#defaultBtn0').bind('click', function(e) {
+        //     e.preventDefault();
+        //     $('#defaultModal0').bPopup({
+        //       follow: [false, false]
+        //     });
+        // });
 		});
 })(jQuery);
 // 팝업 end
