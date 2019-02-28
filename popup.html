@@ -5,38 +5,40 @@
 	<meta http-equiv="X-UA-Compatible" id="X-UA-Compatible" content="IE=edge" />
   <meta name="format-detection" content="telephone=no,address=no,email=no">
 	<meta name="viewport" content="width=860">
-	<link rel="shortcut icon" href="https://gms.oasis.co.k/bizmessage/intro.do/images/gaeasoft_favicon.ico" />
-	<link rel="icon" type="image/x-icon" href="https://gms.oasis.co.k/bizmessage/intro.do/images/gaeasoft_favicon.ico" />
+	<!-- <link rel="shortcut icon" href="https://gms.oasis.co.k/bizmessage/intro.do/images/gaeasoft_favicon.ico" />
+	<link rel="icon" type="image/x-icon" href="https://gms.oasis.co.k/bizmessage/intro.do/images/gaeasoft_favicon.ico" /> -->
 	<title>GMS for Business</title>
 
   <link rel="stylesheet" href="css/style_common.min.css">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="stylesheet" href="css/font.css">
-  <script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="./js/jquery.bpopup.min.js"></script>
+  <script src="./js/jquery-1.11.0.min.js"></script>
+  <script src="./js/jquery.bpopup.min.js"></script>
 </head>
 <body>
   <div class="popup_wrap">
     <div class="popup_header">
-      <img src="./images/popup_logo.png">
+      <img src="./images/popup_logo.png" alt="지어소프트 로고">
       <div class="popup_header_info">
-        <button  id="myBtn0">
-          <img src="./images/popup_icon_sound.png">수신거부해제
+        <button id="myBtn0" class="popupfocus0">
+          <img src="./images/popup_icon_sound.png" alt="스피커 아이콘">수신거부해제
         </button>
       <!-- Modal content start-->
-        <div id="myModal0"   style="display:none;">
+        <div id="myModal0" style="display:none;">
           <div class="popup_SMSlist">
 
             <h3 class="popup_SMSlist_title">
               SMS 전송 리스트<span>(주)테스트</span>
             </h3>
-            <span class="close0_1 b-close">&nbsp;</span>
+            <a class="default_cursor" href="#" title="빈칸"></a>
+            <button class="close0_1 b-close b-close0"></button>
 
             <div class="popup_SMSlist_content">
               <div class="SMSlist_info">
                 <div  class="SMSlist_search">
-                  <input type="search" placeholder="폰번호, 이름으로 조회하세요.">
-                  <button class="search_btn">조회<img src="./images/popup_search.png"></button>
+                  <label for="search_SMSlist">폰번호, 이름 조회</label>
+                  <input id="search_SMSlist" type="search" placeholder="폰번호, 이름으로 조회하세요." title="폰번호,이름 입력">
+                  <button class="search_btn">조회<img src="./images/popup_search.png" alt="검색 이미지"></button>
                 </div>
                 <div class="popup_SMSlist_button_wrap">
                   <div class="popup_SMSlist_num"><span>1</span>건</div>
@@ -46,6 +48,7 @@
                 </div>
                 <div class="popup_SMSlist_table_wrap">
                   <table>
+                    <caption>SMS전송리스트</caption>
                     <colgroup>
                       <col width="20%"/><!-- NO. -->
                       <col width="20%"/><!-- 상태 -->
@@ -54,10 +57,10 @@
                     </colgroup>
                     <thead>
                       <tr>
-                        <th>NO.</th>
-                        <th>상태</th>
-                        <th>전화번호</th>
-                        <th>이름</th>
+                        <th scope="col">NO.</th>
+                        <th scope="col">상태</th>
+                        <th scope="col">전화번호</th>
+                        <th scope="col">이름</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -71,17 +74,17 @@
                   </table>
                 </div>
                 <div class="pagebtn">
-                  <ul>
-                    <li class="page_cuser"><img src="./images/icon_pagebtn_LL.png"alt="first_page"></li>
-                    <li class="page_cuser"><img src="./images/icon_pagebtn_L.png"alt="left_page"></li>
-                    <li class="page_num active">1</li>
-                    <li class="page_num">2</li>
-                    <li class="page_num">3</li>
-                    <li class="page_num">4</li>
-                    <li class="page_num">5</li>
-                    <li class="page_cuser"><img src="./images/icon_pagebtn_R.png"alt="right_page"></li>
-                    <li class="page_cuser"><img src="./images/icon_pagebtn_RR.png"alt="last_page"></li>
-                  </ul>
+                  <div>
+                    <a href="#" class="page_cuser"><img src="./images/icon_pagebtn_LL.png" alt="first_page"></a>
+                    <a href="#" class="page_cuser"><img src="./images/icon_pagebtn_L.png" alt="left_page"></a>
+                    <a href="#" class="page_num active">1</a>
+                    <a href="#" class="page_num">2</a>
+                    <a href="#" class="page_num">3</a>
+                    <a href="#" class="page_num">4</a>
+                    <a href="#" class="page_num">5</a>
+                    <a href="#" class="page_cuser"><img src="./images/icon_pagebtn_R.png" alt="right_page"></a>
+                    <a href="#" class="page_cuser"><img src="./images/icon_pagebtn_RR.png" alt="last_page"></a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -89,21 +92,23 @@
         </div>
       <!-- Modal content end-->
 
-        <button  id="myBtn1">
-          <img src="./images/popup_icon_call.png">공지 & 도움말
+        <button  id="myBtn1" class="popupfocus1">
+          <img src="./images/popup_icon_call.png" alt="공지 도움말 아이콘">공지 & 도움말
         </button>
         <!-- Modal content start-->
         <div id="myModal1"  style="display:none;">
           <div class="popup_notice">
 
-            <h3 class="popup_notice_title">공지 & 도움말</h3><span class="close1 b-close">&nbsp;</span>
+            <h3 class="popup_notice_title">공지 & 도움말</h3>
+            <a class="default_cursor" href="#" title="빈칸"></a>
+            <button class="close1 b-close b-close1"></button>
 
             <div class="popup_notice_content">
               <h3>
-                <img src="./images/popup_icon_pointB.png" class="img_point">서비스 이용 가이드 v1.2
+                <img src="./images/popup_icon_pointB.png" class="img_point" alt="블릿이미지">서비스 이용 가이드 v1.2
               </h3>
               <button class="btn_guidedown">
-                서비스 가이드 다운로드<img src="./images/popup_icon_down.png">
+                서비스 가이드 다운로드<img src="./images/popup_icon_down.png" alt="다운로드 화살표">
               </button>
               <ul>
                 <li>
@@ -120,7 +125,7 @@
             </div>
             <div class="button_wrap popup">
               <button type="button" class="button_default b-close blue">확인</button>
-              <button type="button" class="button_default b-close close1_1">닫기</button>
+              <button type="button" class="button_default b-close close1_1 b-close1">닫기</button>
             </div>
           </div>
         </div>
@@ -135,23 +140,24 @@
       <div class="popup_phone">
         <div class="popup_phone_info">
           <h3>
-            <img src="./images/icon_open_letter.png" class="img_point" style="padding-bottom:3px">제목입력 (LMS 발송 인 경우)
+            <img src="./images/icon_open_letter.png" class="img_point" style="padding-bottom:3px" alt="엽서 이미지">제목입력 (LMS 발송 인 경우)
           </h3>
           <div  class="popup_phone_info_text">
-            <textarea placeholder="SMS (1~80 Byte) &#13;&#10;LMS (80~2,000 Byte)"></textarea>
+            <label class="textarea_title" for="SMS_text">SMS작성</label>
+            <textarea id="SMS_text" placeholder="SMS (1~80 Byte) &#13&#10;LMS (80~2,000 Byte)"></textarea>
           </div>
           <ul class="popup_phone_info_btn">
             <li class="phone_btn">
-              <a>메시지<br/>저장</a>
+              <button>메시지<br/>저장</button>
             </li>
             <li class="phone_btn">
-              <a>저장<br/>메시지함</a>
+              <button>저장<br/>메시지함</button>
             </li>
             <li class="phone_btn">
-              <a>예약<br/>메시지함</a>
+              <button>예약<br/>메시지함</button>
             </li>
             <li class="phone_btn">
-              <a>080<br/>수신거부</a>
+              <button>080<br/>수신거부</button>
             </li>
           </ul>
         </div>
@@ -162,23 +168,24 @@
       </div>
       <div class="popup_content">
         <ul class="tabs">
-            <li class="active" rel="tab1">간편 전송</li>
-            <li rel="tab2">대량 전송</li>
-            <li rel="tab3">전송 결과</li>
+            <li class="active" rel="tab1"><button>간편 전송</button></li>
+            <li rel="tab2"><button>대량 전송</button></li>
+            <li rel="tab3"><button>전송 결과</button></li>
         </ul>
         <div class="tab_container">
         <!-- #tab1 start-->
           <div id="tab1" class="tab_content">
             <ul>
               <li>
-                <img src="./images/popup_icon_point.png" class="img_point">[간편 전송]은 최대 100건까지 수신번호 추가가 가능합니다.
+                <img src="./images/popup_icon_point.png" class="img_point" alt="블릿이미지">[간편 전송]은 최대 100건까지 수신번호 추가가 가능합니다.
               </li>
               <li>
-                <img src="./images/popup_icon_point.png" class="img_point">대량 전송은 상단의 [대량 전송] 탭을 이용해 주세요.
+                <img src="./images/popup_icon_point.png" class="img_point" alt="블릿이미지">대량 전송은 상단의 [대량 전송] 탭을 이용해 주세요.
               </li>
             </ul>
             <div>
               <table class="TextAlignLeft top_border">
+                <caption>SMS건수 리스트</caption>
                 <tbody>
                   <tr>
                     <td class="font_bold">
@@ -192,12 +199,13 @@
               </table>
             </div>
             <div  class="search_num">
-              수신번호 입력
-              <input type="search">
-              <button class="search_btn middle">조회<img src="./images/popup_search.png"></button>
+              <label for="phone_num_input">수신번호 입력</label>
+              <input id="phone_num_input" type="search" title="수신번호 입력">
+              <button class="search_btn middle">조회<img src="./images/popup_search.png" alt="검색이미지"></button>
             </div>
             <div class="search_info">
               <table>
+                <caption>수신번호 리스트</caption>
                 <colgroup>
                   <col width="20%"/><!-- NO. -->
                   <col width=""/><!-- 전화번호 -->
@@ -205,9 +213,9 @@
                 </colgroup>
                 <thead>
                   <tr>
-                    <th>NO.</th>
-                    <th>전화번호</th>
-                    <th>삭제</th>
+                    <th scope="col">NO.</th>
+                    <th scope="col">전화번호</th>
+                    <th scope="col">삭제</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -215,7 +223,7 @@
                     <td>1</td>
                     <td>01036846262</td>
                     <td>
-                      <button><img src="./images/popup_X.png"></button>
+                      <button><img src="./images/popup_X.png" alt="닫기이미지"></button>
                     </td>
                   </tr>
                 </tbody>
@@ -223,6 +231,7 @@
             </div>
             <div>
               <table class="anather_border">
+                <caption>회신번호 리스트</caption>
                 <colgroup>
                   <col width="20%"/>
                   <col width=""/>
@@ -230,7 +239,7 @@
                 </colgroup>
                 <tbody>
                   <tr>
-                    <td class="font_bold">회신번호</td>
+                    <th scope="row" class="font_bold">회신번호</th>
                     <td>0221555100</td>
                     <td>&nbsp;</td>
                   </tr>
@@ -244,19 +253,20 @@
           <div id="tab2" class="tab_content">
             <ul>
               <li>
-                <img src="./images/popup_icon_point.png" class="img_point">[간편 전송]은 최대 100건까지 수신번호 추가가 가능합니다.
+                <img src="./images/popup_icon_point.png" class="img_point" alt="블릿이미지">[간편 전송]은 최대 100건까지 수신번호 추가가 가능합니다.
               </li>
               <li>
-                <img src="./images/popup_icon_point.png" class="img_point">대량 전송은 상단의 [대량 전송] 탭을 이용해 주세요.
+                <img src="./images/popup_icon_point.png" class="img_point" alt="블릿이미지">대량 전송은 상단의 [대량 전송] 탭을 이용해 주세요.
               </li>
             </ul>
             <div>
               <table class="top_border TextAlignLeft">
+                <caption>SMS전송리스트</caption>
                 <tbody>
                   <tr>
-                    <td class="font_bold">
+                    <th scope="row" class="font_bold">
                       8월 사용량
-                    </td>
+                    </th>
                     <td>
                       SMS 10건 LMS 0건  (100원)
                     </td>
@@ -267,6 +277,7 @@
             <div class="search_info">
               <h3 class="search_info_title">수신번호 그룹<button class="list_button" style="margin-top: -17px;">주소록 등록</button></h3>
               <table>
+                <caption>수신번호 리스트</caption>
                 <colgroup>
                   <col width="20%"/><!-- NO. -->
                   <col width="%"/><!-- 전화번호 -->
@@ -274,9 +285,9 @@
                 </colgroup>
                 <thead>
                   <tr>
-                    <th>NO.</th>
-                    <th>전화번호</th>
-                    <th>삭제</th>
+                    <th scope="col">NO.</th>
+                    <th scope="col">전화번호</th>
+                    <th scope="col">삭제</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -284,7 +295,7 @@
                     <td>1</td>
                     <td>01036846262</td>
                     <td>
-                      <button><img src="./images/popup_X.png"></button>
+                      <button><img src="./images/popup_X.png" alt="닫기이미지"></button>
                     </td>
                   </tr>
                 </tbody>
@@ -292,6 +303,7 @@
             </div>
             <div>
               <table class="anather_border">
+                <caption>회신번호 리스트</caption>
                 <colgroup>
                   <col width="20%"/><!-- NO. -->
                   <col width="%"/><!-- 전화번호 -->
@@ -299,7 +311,7 @@
                 </colgroup>
                 <tbody>
                   <tr>
-                    <td class="font_bold">회신번호</td>
+                    <th scope="row" class="font_bold">회신번호</th>
                     <td>0221555100</td>
                     <td>&nbsp;</td>
                   </tr>
@@ -313,17 +325,18 @@
           <div id="tab3" class="tab_content">
             <ul>
               <li>
-                <img src="./images/popup_icon_point.png" class="img_point">전송한 메시지 수에 따라 조회 시간이 다소 소요될 수 있습니다.
+                <img src="./images/popup_icon_point.png" class="img_point" alt="블릿이미지">전송한 메시지 수에 따라 조회 시간이 다소 소요될 수 있습니다.
               </li>
               <li>
-                <img src="./images/popup_icon_point.png" class="img_point">"성공/실패/대기" 선택 시, 전송 결과 내역을 확인할 수 있습니다.
+                <img src="./images/popup_icon_point.png" class="img_point" alt="블릿이미지">"성공/실패/대기" 선택 시, 전송 결과 내역을 확인할 수 있습니다.
               </li>
               <li>
-                <img src="./images/popup_icon_point.png" class="img_point">전송 결과 내역은 이번달을 제외한 최근 6개월까지 제공됩니다.
+                <img src="./images/popup_icon_point.png" class="img_point" alt="블릿이미지">전송 결과 내역은 이번달을 제외한 최근 6개월까지 제공됩니다.
               </li>
             </ul>
             <div class="search_info">
               <table class="paddingLR0">
+                <caption>메시지 발송 결과 리스트</caption>
                 <colgroup>
                   <col width="%"/><!-- 메시지 -->
                   <col width="15%"/><!-- 전송일 -->
@@ -336,14 +349,14 @@
                 </colgroup>
                 <thead>
                   <tr>
-                    <th>메시지</th>
-                    <th>전송일</th>
-                    <th>타입</th>
-                    <th>타입</th>
-                    <th>건수</th>
-                    <th>성공</th>
-                    <th>실패</th>
-                    <th>대기</th>
+                    <th scope="col">메시지</th>
+                    <th scope="col">전송일</th>
+                    <th scope="col">타입</th>
+                    <th scope="col">타입</th>
+                    <th scope="col">건수</th>
+                    <th scope="col">성공</th>
+                    <th scope="col">실패</th>
+                    <th scope="col">대기</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -362,6 +375,7 @@
             </div>
             <div>
               <table class="anather_border">
+                <caption>회신번호 리스트</caption>
                 <colgroup>
                   <col width="20%"/><!-- NO. -->
                   <col width="%"/><!-- 전화번호 -->
@@ -369,7 +383,7 @@
                 </colgroup>
                 <tbody>
                   <tr>
-                    <td class="font_bold">회신번호</td>
+                    <th scope="row" class="font_bold">회신번호</th>
                     <td>0221555100</td>
                     <td>&nbsp;</td>
                   </tr>
@@ -384,15 +398,16 @@
   </div>
 
 <!-- 샘플 팝업 start -->
-<div class="popup_phone_btn_wrap"style="margin-bottom:20px;">
-  <button class="default_big_off" id="defaultBtn0">
+<div class="popup_phone_btn_wrap" style="margin-bottom:20px;">
+  <button class="default_big_off" id="myBtn3" class="popupfocus2">
     기본팝업
   </button>
 </div>
-<div id="defaultModal0" style="display:none;">
+<div id="myModal3" style="display:none;">
   <div class="popup_default">
     <h3 class="popup_default_title">기본 팝업</h3>
-    <span class="close0_1 b-close">&nbsp;</span>
+    <a class="default_cursor" href="#" title="빈칸"></a>
+    <button class="close0_1 b-close b-close2">  </button>
 
     <div class="popup_default_content">
       <p>
@@ -400,16 +415,17 @@
         (변경 후 “회신번호”에 변경된 회신 번호가 정상적으로 노출되는지 확인)
         -회신번호 변경 기능은 복수의회신 번호를 등록한 계정에한하여 제공되며, 회신번호 추가는 지어소프트 담당자에게 요청 바랍니다.
       </p>
-      <textarea style="height:300px"></textarea>
+      <label class="textarea_title" for="text_area">텍스트 작성</label>
+      <textarea id="text_area" style="height:300px"></textarea>
     </div>
     <div class="popup_button_wrap">
       <button type="button" class="button_default b-close blue">확인</button>
-      <button type="button" class="button_default b-close close1_1">닫기</button>
+      <button type="button" class="button_default b-close close1_1 b-close2">닫기</button>
     </div>
   </div>
 </div>
 <!-- 샘플 팝업 end -->
 
-  <script type="text/javascript" src="./js/index.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 </html>

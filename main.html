@@ -5,66 +5,65 @@
 	<meta http-equiv="X-UA-Compatible" id="X-UA-Compatible" content="IE=edge" />
   <meta name="format-detection" content="telephone=no,address=no,email=no">
 	<meta name="viewport" content="width=1100">
-	<link rel="shortcut icon" href="/images/gaeasoft_favicon.ico" />
-	<link rel="icon" type="image/x-icon" href="/images/gaeasoft_favicon.ico" />
+	<!-- <link rel="shortcut icon" href="/images/gaeasoft_favicon.ico" />
+	<link rel="icon" type="image/x-icon" href="/images/gaeasoft_favicon.ico" /> -->
 	<title>GMS for Business</title>
 
   <link rel="stylesheet" href="css/style_common.min.css">
   <link rel="stylesheet" href="css/style_main.min.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/normalize.css">
-  <!-- <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet"> -->
   <link rel="stylesheet" href="css/font.css">
 
-
-  <script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
-  <!-- <script src="http://code.jquery.com/jquery-3.3.1.js"></script> -->
+  <script src="./js/jquery-1.11.0.min.js"></script>
   <script>
-    $( document ).ready( function() {
-      var jbOffset = $( '.jbMenu' ).offset();
-      $( window ).scroll( function() {
-        if ( $( document ).scrollTop() > jbOffset.top ) {
-          $( '.jbMenu' ).addClass( 'jbFixed' );
-        }
-        else {
-          $( '.jbMenu' ).removeClass( 'jbFixed' );
-        }
+  //메인 스크롤 모션start
+  $( document ).ready( function() {
+    var jbOffset = $( '.jbMenu' ).offset();
+    $( window ).scroll( function() {
+      if ( $( document ).scrollTop() > jbOffset.top ) {
+        $( '.jbMenu' ).addClass( 'jbFixed' );
+      }
+      else {
+        $( '.jbMenu' ).removeClass( 'jbFixed' );
+      }
+    });
+  });
+  $(function(){
+      var link = $('#navbar a.dot');
+      link.on('click',function(e){
+          //href 속성을 통해, /div id 타겟을 잡음
+          var target = $($(this).attr('href'));
+          //target section의 좌표를 통해 꼭대기로 이동
+          $('html, body').animate({
+              scrollTop: target.offset().top-88
+          },650);
+          //active 클래스 부여
+          // $(this).addClass('active');
+          //앵커를 통해 이동할때, URL에 #id가 붙지 않도록 함.
+          e.preventDefault();
       });
-    });
-    $(function(){
-        var link = $('#navbar a.dot');
-        link.on('click',function(e){
-            //href 속성을 통해, /div id 타겟을 잡음
-            var target = $($(this).attr('href'));
-            //target section의 좌표를 통해 꼭대기로 이동
-            $('html, body').animate({
-                scrollTop: target.offset().top-88
-            },650);
-            //active 클래스 부여
-            // $(this).addClass('active');
-            //앵커를 통해 이동할때, URL에 #id가 붙지 않도록 함.
-            e.preventDefault();
+      $(window).on('scroll',function(){
+          findPosition();
+      });
+      function findPosition(){
+        $('.section').each(function(){
+            if( ($(this).offset().top - $(window).scrollTop() ) < 90){
+                link.removeClass('active');
+                $('#navbar').find('[data-scroll="'+ $(this).attr('id') +'"]').addClass('active');
+            }
         });
-        $(window).on('scroll',function(){
-            findPosition();
-        });
-        function findPosition(){
-          $('.section').each(function(){
-              if( ($(this).offset().top - $(window).scrollTop() ) < 90){
-                  link.removeClass('active');
-                  $('#navbar').find('[data-scroll="'+ $(this).attr('id') +'"]').addClass('active');
-              }
-          });
-        }
-        findPosition();
-        //top으로 이동 start
-        var topEle = $('#topBtn');
-        var delay = 500;
-        topEle.on('click', function() {
-          $('html').stop().animate({scrollTop: 0}, delay);
-        });
-        //top으로 이동 end
-    });
+      }
+      findPosition();
+      //top으로 이동 start
+      var topEle = $('#topBtn');
+      var delay = 500;
+      topEle.on('click', function() {
+        $('html').stop().animate({scrollTop: 0}, delay);
+      });
+      //top으로 이동 end
+  });
+  //메인 스크롤 모션end
   </script>
 
 </head>
@@ -72,97 +71,94 @@
   <div class="login" ID="top">
     <ul>
       <li>
-        <a href="">회원가입</a>
-      </li>
-      <li>
-        <a href="">로그인</a>
+        <a href="#" title="로그인">로그인</a>|<a href="#" title="회원가입">회원가입</a>
       </li>
     </ul>
   </div>
-  <div class="header">
+  <div class="header gnb">
     <ul class="main_menu">
       <li>
         <img src="./images/logo_top.png" alt="로고">
       </li>
       <li>
-        <a href="01_group.html">카카오 비즈메시지</a>
+        <a href="01_group.html" title="카카오 비즈메시지">카카오 비즈메시지</a>
         <!--서브 메뉴01 카카오 비즈메시지 start-->
-        <div class="submenu_wrap">
+        <div class="submenu_wrap gnb_list2">
           <ul class="submenu clearfix">
             <li>
               &nbsp;
             </li>
             <li>
               <div class="depth2">
-                <a href="02_manage.html">플러스 친구</a>
+                <a href="02_manage.html" title="플러스 친구">플러스 친구</a>
               </div>
               <ul class="submenu_list">
                 <li>
-                  <a href="02_manage.html">검수 신청/수정</a>
+                  <a href="02_manage.html" title="검수 신청/수정">검수 신청/수정</a>
                 </li>
                 <li>
-                  <a href="02_manage.html">검수 현황</a>
+                  <a href="02_manage.html" title="검수 현황">검수 현황</a>
                 </li>
               </ul>
             </li>
             <li>
               <div class="depth2">
-                <a href="02_manage.html">템플릿</a>
+                <a href="02_manage.html" title="템플릿">템플릿</a>
               </div>
               <ul class="submenu_list">
                 <li>
-                  <a href="02_manage.html">검수 신청/수정</a>
+                  <a href="02_manage.html" title="검수 신청/수정">검수 신청/수정</a>
                 </li>
                 <li>
-                  <a href="02_manage.html">검수 현황</a>
+                  <a href="02_manage.html" title="검수 현황">검수 현황</a>
                 </li>
               </ul>
             </li>
             <li>
               <div class="depth2">
-                <a href="02_manage.html">API 연동</a>
+                <a href="02_manage.html"  title="API연동">API 연동</a>
               </div>
               <ul class="submenu_list">
                 <li>
-                  <a href="02_manage.html">인증키 신청</a>
+                  <a href="02_manage.html" title="인증키 신청">인증키 신청</a>
                 </li>
                 <li>
-                  <a href="02_manage.html">연동 규격 - 알림톡</a>
+                  <a href="02_manage.html" title="연동 규격 - 알림톡">연동 규격 - 알림톡</a>
                 </li>
                 <li>
-                  <a href="02_manage.html">연동 규격 - 친구톡</a>
+                  <a href="02_manage.html" title="연동 규격 - 친구톡">연동 규격 - 친구톡</a>
                 </li>
               </ul>
             </li>
             <li>
               <div class="depth2">
-                <a href="02_manage.html">전송창 연동</a>
+                <a href="02_manage.html" title="전송창 연동">전송창 연동</a>
               </div>
               <ul class="submenu_list">
                 <li>
-                  <a href="02_manage.html">인증키 신청</a>
+                  <a href="02_manage.html" title="인증키 신청">인증키 신청</a>
                 </li>
                 <li>
-                  <a href="02_manage.html">전송창 관리</a>
+                  <a href="02_manage.html" title="전송창 관리">전송창 관리</a>
                 </li>
               </ul>
             </li>
             <li>
               <div class="depth2">
-                <a href="02_manage.html">전송 관리</a>
+                <a href="02_manage.html" title="전송 관리">전송 관리</a>
               </div>
               <ul class="submenu_list">
                 <li>
-                  <a href="02_manage.html">전송 내역</a>
+                  <a href="02_manage.html" title="전송 내역">전송 내역</a>
                 </li>
                 <li>
-                  <a href="02_manage.html">전송 조회</a>
+                  <a href="02_manage.html" title="전송 조회">전송 조회</a>
                 </li>
                 <li>
-                  <a href="02_manage.html">전송 통계 - 월별</a>
+                  <a href="02_manage.html" title="전송 통계 - 월별">전송 통계 - 월별</a>
                 </li>
                 <li>
-                  <a href="02_manage.html">전송 통계 - 일별</a>
+                  <a href="02_manage.html" title="전송 통계 - 일별">전송 통계 - 일별</a>
                 </li>
               </ul>
             </li>
@@ -171,24 +167,24 @@
         <!--서브 메뉴01 카카오 비즈메시지 end-->
       </li>
       <li>
-        <a href="02_manage.html">문자 메시지</a>
+        <a href="02_manage.html" title="문자 메시지">문자 메시지</a>
       </li>
       <li>
-        <a href="04_system.html">마이페이지</a>
+        <a href="04_system.html" title="마이페이지">마이페이지</a>
         <!--서브 메뉴01 카카오 비즈메시지 start-->
-        <div class="submenu_wrap">
+        <div class="submenu_wrap gnb_list2">
           <ul class="submenu">
             <li>
               &nbsp;
             </li>
             <li>
               <div class="depth2">
-                <a href="02_manage.html">플러스 친구</a>
+                <a href="02_manage.html" title="플러스 친구">플러스 친구</a>
               </div>
             </li>
             <li>
               <div class="depth2">
-                <a href="02_manage.html">템플릿</a>
+                <a href="02_manage.html" title="템플릿">템플릿</a>
               </div>
             </li>
           </ul>
@@ -196,26 +192,26 @@
         <!--서브 메뉴01 카카오 비즈메시지 end-->
       </li>
       <li>
-        <a href="05_dashbord.html">고객센터</a>
+        <a href="05_dashbord.html" title="고객센터">고객센터</a>
         <!--서브 메뉴01 카카오 비즈메시지 start-->
-        <div class="submenu_wrap">
+        <div class="submenu_wrap gnb_list2">
           <ul class="submenu">
             <li>
               &nbsp;
             </li>
             <li>
               <div class="depth2">
-                <a href="02_manage.html">플러스 친구</a>
+                <a href="02_manage.html" title="플러스 친구">플러스 친구</a>
               </div>
             </li>
             <li>
               <div class="depth2">
-                <a href="02_manage.html">템플릿</a>
+                <a href="02_manage.html" title="템플릿">템플릿</a>
               </div>
             </li>
             <li>
               <div class="depth2">
-                <a href="02_manage.html">API 연동</a>
+                <a href="02_manage.html" title="API 연동">API 연동</a>
               </div>
             </li>
           </ul>
@@ -223,23 +219,29 @@
         <!--서브 메뉴01 카카오 비즈메시지 end-->
 
       </li>
+      <li>
+        <a href="#" title="빈칸"></a>
+      </li>
       <li class="message_transfer">
-        <div  class="mymenu_select_wrap">
-          <div class="mymenu_select">
+        <div class="mymenu_select_wrap" title="메시지전송">
+          <button class="mymenu_select">
             <span>메시지 전송</span>
-            <img src="./images/icon_select.png">
-          </div>
+            <img src="./images/icon_select.png" alt="아이콘_셀렉트">
+          </button>
           <!-- Modal content start-->
           <div class="mymenu_popup">
             <ul class="mymenu-content close">
               <li class="mymenu">
-                <a href="">알림톡 전송</a>
+                <a href="#"  title="알림톡 전송" tabindex="0">알림톡 전송</a>
               </li>
               <li class="mymenu">
-                <a href="">친구톡 전송</a>
+                <a href="#" title="친구톡 전송" tabindex="0">친구톡 전송</a>
               </li>
               <li class="mymenu">
-                <a href="">문자 전송</a>
+                <a href="#" title="문자 전송" tabindex="0">문자 전송</a>
+              </li>
+              <li class="mymenu close">
+                <a href="#" title="닫기" tabindex="0">닫기</a>
               </li>
             </ul>
           </div>
@@ -260,13 +262,13 @@
     <nav class="menu_tab_wrap jbMenu navbar" id="navbar">
       <ul class="menu_tab nav-menu" id="menu">
         <li>
-           <a data-scroll="content01" href="#content01" class="dot active">서비스 특징</a>
+          <a data-scroll="content01" href="#content01" class="dot active" title="서비스 특징">서비스 특징</a>
         </li>
         <li>
-            <a data-scroll="content02" href="#content02" class="dot">서비스 비교</a>
+          <a data-scroll="content02" href="#content02" class="dot" title="서비스 비교">서비스 비교</a>
          </li>
          <li>
-             <a data-scroll="content03" href="#content03" class="dot">파트너 / 이용 문의</a>
+          <a data-scroll="content03" href="#content03" class="dot" title="파트너 / 이용 문의">파트너 / 이용 문의</a>
         </li>
       </ul>
     </nav>
@@ -302,10 +304,8 @@
             <h1><span class="text_blue">문자 메시지</span> 내용을 저장할 수 있습니다</h1>
             <p>국내 최저가로 제공되는 문자 서비스를 이용하세요. <br/>
               매번 메시지를 새로 작성할 필요가 없습니다.<br/>
-              <!-- 20190107 수정 start -->
               주소록과 메시지 내용을 저장하고 수정하여 발송해보세요. <br/>
               <span class="main_text_bottomMargin">단문, 장문을 대량 발송하며, 고객 주소록은 한 번의 업로드로 영구 보관합니다.</span>
-              <!-- 20190107 수정 end -->
             </p>
           </div>
         </div>
@@ -318,6 +318,7 @@
           <h3>알림톡, 친구톡, 문자 메시지를 한눈에 비교해 드립니다.</h3>
           <div>
             <table>
+              <caption>서비스 비교</caption>
               <colgroup>
                 <col width="16%"/><!-- 빈칸 -->
                 <col width="28%"/><!-- 알림톡 -->
@@ -326,25 +327,25 @@
               </colgroup>
               <thead>
                 <tr>
-                  <th>
+                  <th scope="col">
                     &nbsp;
                   </th>
-                  <th>
+                  <th scope="col">
                     알림톡
                   </th>
-                  <th>
+                  <th scope="col">
                     친구톡
                   </th>
-                  <th>
+                  <th scope="col">
                     문자 메시지
                   </th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>
+                  <th scope="row">
                     특장점
-                  </td>
+                  </th>
                   <td>
                     카카오톡 이용 고객에게 정보 발송
                   </td>
@@ -356,9 +357,9 @@
                   </td>
                 </tr>
                 <tr>
-                  <td>
+                  <th scope="row">
                     발송 대상
-                  </td>
+                  </th>
                   <td>
                     모든 고객<br/>
                     (전화번호 정보 필요)
@@ -372,9 +373,9 @@
                   </td>
                 </tr>
                 <tr>
-                  <td>
+                  <th scope="row">
                     활용 사례
-                  </td>
+                  </th>
                   <td>
                     결제 승인/취소 안내, 배송 정보, 예약 안내 등
                   </td>
@@ -386,9 +387,9 @@
                   </td>
                 </tr>
                 <tr>
-                  <td>
+                  <th scope="row">
                     메시지 형식
-                  </td>
+                  </th>
                   <td>
                     한/영 구분 없이 최대 1,000자 텍스트
                   </td>
@@ -402,9 +403,9 @@
                   </td>
                 </tr>
                 <tr>
-                  <td>
+                  <th scope="row">
                     특이사항
-                  </td>
+                  </th>
                   <td>
                     메시지 내용 템플릿의 사전 심사 필요
                   </td>
@@ -416,9 +417,9 @@
                   </td>
                 </tr>
                 <tr>
-                  <td>
+                  <th scope="row">
                     공통사항
-                  </td>
+                  </th>
                   <td colspan=3>
                     사이트 직접 발송/API 적용 선택 가능, 전송 결과 및 주소록 관리 가능, 실시간 발신 내역 통계 제공
                   </td>
@@ -437,19 +438,19 @@
           <div class="logo_office_wrap">
             <ul>
               <li>
-                <img src="./images/logo_office01.png">
+                <img src="./images/logo_office01.png" alt="KT로고">
                 <p>KT</p>
               </li>
               <li class="second_marginRight0">
-                <img src="./images/logo_office02.png">
+                <img src="./images/logo_office02.png" alt="국세청 로고">
                 <p>국세청 근로장려금</p>
               </li>
               <li>
-                <img src="./images/logo_office04.png">
+                <img src="./images/logo_office04.png" alt="군인메시지 이미지">
                 <p>군인 메시지</p>
               </li>
               <li class="forth_marginRight0">
-                <img src="./images/logo_office08.png">
+                <img src="./images/logo_office08.png" alt="오아시스 로고">
                 <p>OASIS</p>
               </li>
             </ul>
@@ -457,7 +458,7 @@
         </div>
       </div>
     </div>
-    <div class="section content_wrap bg_gray" id="content03" style="padding:80px 0px;">
+    <div class="section content_wrap bg_gray" style="padding:80px 0px;">
       <div class="content">
         <div class="content_sevice">
           <h1>이용 문의</h1>
@@ -476,23 +477,23 @@
   <div class="foot_wrap">
     <div class="foot">
       <ul class="foot_menu">
-        <li><a>개인정보처리방침</a></li>
-        <li><a href="">이용약관</a></li>
-        <li><a href="">공지사항</a></li>
-        <li><a href="">1:1문의하기</a></li>
+        <li><a href="#" title="개인정보처리방침">개인정보처리방침</a></li>
+        <li><a href="#" title="이용약관">이용약관</a></li>
+        <li><a href="#" title="공지사항">공지사항</a></li>
+        <li><a href="#" title="1:1문의하기">1:1문의하기</a></li>
       </ul><br/>
       <div class="foot_text">
         (주)지어소프트 대표이사 : 오형돈, 박승준&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;사업자등록번호 211-86-45334<br/>
         서울시 서초구 서초중앙로 8길 117, 지어소프트 빌딩&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;고객센터 02-2155-5100
       </div>
       <div class="logo_wrap">
-        <img src="./images/logo_foot.png" alt="로고">
+        <img src="./images/logo_foot.png" alt="지어소프트 로고">
       </div>
     </div>
   </div>
   <button ID="topBtn" class="btn_top">
-    <a><img src="./images/btn_top.png"></a>
+    <img src="./images/btn_top.png" alt="TOP 아이콘 이미지">
   </button>
-  <script type="text/javascript" src="./js/index.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 </html>

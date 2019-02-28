@@ -4,44 +4,46 @@
   <meta charset="UTF-8">
   <title>Gaea Soft</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="format-detection" content="telephone=no,address=no,email=no"><!--20181221 추가-->
+  <meta name="format-detection" content="telephone=no,address=no,email=no">
   <meta name="viewport" content="width=1248">
   <link rel="stylesheet" href="css/style_common.min.css">
   <link rel="stylesheet" href="css/style_login.min.css">
 </head>
 <body>
-    <div class="login_wrap">
-      <div>
-        <img src="./images/gaeasoft_logo_h.png">
-      </div>
-      <div class="login_ID">
-        <img src="./images/icon_user.png">
-        <input type="text" placeholder="Username">
-      </div>
-      <div class="login_PW">
-        <img src="./images/icon_pw.png">
-        <input type="password" placeholder="Password">
-      </div>
-      <div class="save_ID">
-        <label class="container">
-          <input type="checkbox">
-          <span class="checkmark"></span>
-        </label>
-        아이디 저장
-      </div>
-      <div class="login_button_wrap">
-        <button class="login_button_default blue">로그인</button>
-      </div>
-      <div>
-        <div class="login_find_info">
-					<a href="#">아이디 찾기</a><a href="#">비밀번호 재설정</a><a href="" class="border0">회원가입</a>
-				</div>
-      </div>
-      <div class="copy">
-        <!-- ⓒ 2018 GAEASOFT CO. LTD. ALL RIGHTS RESERVED -->
-        COPYRIGHT ⓒ 2016 GAEASOFT CORP. ALL RIGHTS RESERVED.
-      </div>
+  <div class="login_wrap">
+    <div>
+      <img src="./images/gaeasoft_logo_h.png" alt="지어소프트로고">
     </div>
+    <div class="login_ID">
+      <label for="username">유저이름 입력</label>
+      <img src="./images/icon_user.png" alt="아이콘_유저">
+      <input type="text" id="username" placeholder="Username" title="유저이름 입력">
+    </div>
+    <div class="login_PW">
+      <label for="passwordinput">비밀번호 입력</label>
+      <img src="./images/icon_pw.png" alt="아이콘_비밀번호">
+      <input type="password" id="passwordinput" placeholder="Password" title="비밀번호 입력">
+    </div>
+    <div class="save_ID">
+      <label class="container" for="idcheck" title="아이디 저장 체크">
+        <input type="checkbox" id="idcheck" title="아이디 저장 체크 박스">
+        <span class="checkmark"></span>
+      </label>
+      아이디 저장
+    </div>
+    <div class="login_button_wrap">
+      <button class="login_button_default blue">로그인</button>
+    </div>
+    <div>
+      <div class="login_find_info">
+				<a href="#" title="아이디 찾기 버튼">아이디 찾기</a><a href="#" title="비밀번호 재설정 버튼">비밀번호 재설정</a><a href="" class="border0" title="회원가입 버튼">회원가입</a>
+			</div>
+    </div>
+    <div class="copy">
+      <!-- ⓒ 2018 GAEASOFT CO. LTD. ALL RIGHTS RESERVED -->
+      COPYRIGHT ⓒ 2016 GAEASOFT CORP. ALL RIGHTS RESERVED.
+    </div>
+  </div>
 
 </body>
 

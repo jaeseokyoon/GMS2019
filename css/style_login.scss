@@ -14,17 +14,24 @@
     text-indent: 55px;
     background: #fff;
     border: 1px solid #cccccc;
+    &#username{border-bottom: 0;}
     &[type="checkbox"]{
-      height: 24px;
-      width:24px;
+      height: 25px;
+      width:25px;
+      margin: 0;
       border: 0px solid #cccccc;
     }
   }
 }
 
-.login_ID{margin: 45px auto -1px;}
+.login_ID{
+  margin: 45px auto 0;
+}
 .login_ID,
-.login_PW{position:relative;}
+.login_PW{
+  position:relative;
+  label{display: none;}
+}
 .login_ID img,
 .login_PW img{
   position:absolute;
@@ -84,6 +91,7 @@
     text-align: center;
     padding: initial;
     width: 400px;
-    bottom: 5%;
+    // bottom: 5%;
+    margin-top:50px;
 }
 /*로그인 페이지 스타일 end*/

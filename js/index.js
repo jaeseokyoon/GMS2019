@@ -1,3 +1,6 @@
+
+
+
 // popup 탭메뉴 start
 $(function () {
 
@@ -15,19 +18,82 @@ $(function () {
 });
 //popup 탭메뉴 end
 
+// popup 탭메뉴 start
+// $(function () {
+//
+// 	$(".mymenu_select").hover(function () {
+// 			$(this).addClass("active");
+// 	}, function(){
+// 	  $(".mymenu_select").removeClass("active");
+// 	});
+// });
+
+	// $('p').hover(function() {
+	//   $(this).css("color", "red");
+	// }, function(){
+	//   $(this).css("color", "blue");
+	// });
+
+
+	$(function () {
+		$(".mymenu_select").click(
+			function () {
+				$(this).addClass("active");
+			});
+	});
+
+	$(function () {
+		$(".close").click(
+			function(){
+			  $(".mymenu_select").removeClass("active");
+		});
+	});
+//popup 탭메뉴 end
+
+
+
+/* gnb 웹접근성 탭키 포커스 이동 start*/
+$(function(){
+var gnb = $('.gnb'); // nav태그 클래스값입력
+gnb.find('>ul>li>a')
+  .on('mouseenter',function(e){
+    e.preventDefault();
+    gnb
+      .find('>ul>li>.gnb_list2:visible') // 2뎁스 클래스명
+      .hide()
+      .parent('li')
+      .removeClass('on'); // css에서 on이라는 클래스값을 입력
+    $(this)
+      .next('.gnb_list2:hidden') // 2뎁스 클래스명
+      .show()
+      .parent('li')
+      .addClass('on');
+  })
+  .focus(function(){
+    $(this).mouseover();
+  })
+  .end()
+  .mouseleave(function(){
+    gnb
+      .find('>ul>li>.gnb_list2') // 2뎁스 클래스명
+      .hide()
+      .prev('a')
+      .parent()
+      .siblings()
+      .removeClass('on');
+  })
+    .find('li').last().find('.snb-tit2').focusout(function(){ // 마지막 gnb 2차메뉴에서 마우스를 벗어나을때 사라진다.
+          $(this).mouseleave();
+      });
+});
+/* gnb 웹접근성 탭키 포커스 이동 end*/
+
+
+
 //모달팝업 start22
 
 ;(function($) {
     $(function() {
-			// for (var i = 0; i <= 1; i++){
-			// 	$('#myBtn'+ i).bind('click', function(e) {
-			// 		e.preventDefault();
-			// 		$('#myModal'+ i).bPopup({
-			// 			follow: [false, false]
-			// 		});
-			// 	});
-			// 	alert(i);
-			// };
 
 			for (var i = 0; i <= 10; i++){
 
@@ -38,56 +104,29 @@ $(function () {
 				$('#myBtn'+ i).on("click",function(e){//클릭하면
 					e.preventDefault();
 					$(this).data("pop").bPopup({//미리 만들어 놓은 "pop"를 오픈
-						follow: [false, false]
+						// follow: [false, false]
 					});
+					$(".default_cursor").focus();
 				});
-
+				$('.b-close0').on("click",function(){
+					$('.popupfocus0').focus();
+				});
+				$('.b-close1').on("click",function(){
+					$('.popupfocus1').focus();
+				});
+				$('.b-close2').on("click",function(){
+					$('.popupfocus2').focus();
+				});
+				$('.close').on("click",function(){
+					$('.mymenu_select').focus();
+				});
 			};
-
-        // $('#myBtn1').bind('click', function(e) {
-        //     e.preventDefault();
-        //     $('#myModal1').bPopup({
-        //       follow: [false, false]
-        //     });
-        // });
-				// $('#defaultBtn0').bind('click', function(e) {
-        //     e.preventDefault();
-        //     $('#defaultModal0').bPopup({
-        //       follow: [false, false]
-        //     });
-        // });
 		});
 })(jQuery);
+
+
 // 팝업 end
 
-//마이메뉴 팝업 start
-	$(document).ready(function(){
-			// Get the modal
-			 var modal = document.getElementById('myModal0');
-
-			 // Get the button that opens the modal
-			 var btn = document.getElementById("myBtn0");
-
-			 // Get the <span> element that closes the modal
-			 var span = document.getElementsByClassName("close0_1")[0];
-
-			 // When the user clicks on the button, open the modal
-			 btn.onclick = function() {
-					 modal.style.display = "block";
-			 }
-
-			 // When the user clicks on <span> (x), close the modal
-			 span.onclick = function() {
-					 modal.style.display = "none";
-			 }
-			 // When the user clicks anywhere outside of the modal, close it
-			 window.onclick = function(event) {
-					 if (event.target == modal) {
-							 modal.style.display = "none";
-					 }
-			 }
-	});
-//마이메뉴 팝업 end
 
 
 //페이지 버튼 start
