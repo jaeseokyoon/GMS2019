@@ -5,8 +5,7 @@ html, body{height:100%; margin:0;padding:0;color: #333;
   -moz-osx-font-smoothing: grayscale;
 }
 body{height:auto; color:#222;-webkit-text-size-adjust:none;word-break:keep-all;}
-p,ul,ol,li,dl,dt,dd,form {list-style-image:none;list-style-position:outside;list-style-type:none;border:0px;
-margin-block-start:0;margin-block-end:0;padding-inline-start:0;}
+p,ul,ol,li,dl,dt,dd,form {list-style-image:none;list-style-position:outside;list-style-type:none;border:0px;}
 img,fieldset, frameset, frameborder, frame {border:0;}
 a, img, span, b, input, select, em, textarea,  strong{outline-style:none;}
 a{color:#333;}
