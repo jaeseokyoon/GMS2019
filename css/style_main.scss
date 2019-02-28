@@ -38,7 +38,10 @@
     border-left: solid 1px #eff1f2;
     box-sizing: border-box;
     &:focus,
-    &:active{outline: 0;border: 0;}
+    &:active{
+      // outline: 0;
+      border: 0;
+    }
   }
 }
 #tab1:checked ~ .content #tab-content1 {

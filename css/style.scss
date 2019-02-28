@@ -285,7 +285,7 @@ input[type=radio]{
       border-radius: 50%;
       display: inline-block;
     }
-    &:focus{outline: auto;}
+    // &:focus{outline: auto;}
   }
   @media \0screen {&+label{display: none;}}
   &:checked+label>span{

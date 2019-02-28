@@ -19,7 +19,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	outline: 0;
+	/* outline: 0; */
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -80,7 +80,10 @@ a, img, span, b, input, select, em, textarea, strong{
 	/* outline-style:none; */
 }
 a,a:hover,a:focus{text-decoration:none; color:inherit;}
-*:focus {outline:auto;}
+/* *:focus {
+	outline:auto;
+	outline-color: #a1c9e9;
+} */
 i, em, address { font-style: normal; font-weight: normal; }
 
 textarea::placeholder,textarea:-ms-input-placeholder,

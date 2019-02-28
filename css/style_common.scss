@@ -258,6 +258,10 @@ button{border: 0;background: none;}
       margin-bottom:21px;
     }
     /*-----------메인메뉴 펼침 end--------------*/
+    &.hover_none:hover{
+      color: none;
+      background: none;
+    }
   }
 }
 
